@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
       <body
         className={`  antialiased `}
       >
-        <div className="px-4">
+        <div className="">
           <Navbar></Navbar>
         </div>
-        <div>
+        <div className="py-10">
           {children}
         </div>
       </body>

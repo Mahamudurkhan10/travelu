@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
-     const navItems = <div className='flex text-lg font-semibold gap-8 space-x-9'>
+     const navItems = <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>
           <Link href={'/'}><li> Home </li></Link>
           <Link href={'/'}><li> Destination </li></Link>
           <Link href={'/'}><li> About Us </li></Link>
@@ -14,8 +14,8 @@ const Navbar = () => {
      </div>
      return (
           <div>
-               <div className="navbar bg-base-100">
-                    <div className="navbar-start">
+               <div className="navbar fixed z-10 bg-base-100">
+                    <div className="navbar-start px-4">
                          <div className="dropdown">
                               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                                    <svg
@@ -45,9 +45,9 @@ const Navbar = () => {
                          </ul>
                     </div>
                     <div className="navbar-end">
-                         <div className='space-x-4'>
-                              <button className='btn btn-warning hover:text-white  btn-outline px-8'> Login </button>
-                              <button className='btn bg-warning hover:text-white hover:bg-warning text-white px-8'> SignUp </button>
+                         <div className='lg:space-x-4 flex'>
+                              <button className='btn  btn-warning hover:text-white lg:btn-outline px-8'> Login </button>
+                              <button className='btn hidden lg:block bg-warning hover:text-white hover:bg-warning text-white px-8'> SignUp </button>
                          </div>
                     </div>
                </div>
