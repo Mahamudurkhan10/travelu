@@ -1,12 +1,18 @@
-
+"use client"
 import { Backpack } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+
+
 import React from 'react';
 
 const Navbar = () => {
+    const pathName = usePathname()
+    
      const navItems = <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>
-          <Link href={'/'}><li> Home </li></Link>
-          <Link href={'/'}><li> Destination </li></Link>
+          <Link href={'/'}  ><li className={pathName === '/' ? 'text-warning font-bold' : ''} >Home</li></Link>
+          <Link href={'/destination'}><li  className={pathName === '/destination' ? 'text-warning font-bold' : ''}> Destination </li></Link>
           <Link href={'/'}><li> About Us </li></Link>
           <Link href={'/'}><li> Contact Us </li></Link>
           <Link href={'/'}><li> Blog </li></Link>

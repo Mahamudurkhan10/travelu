@@ -1,6 +1,7 @@
 
 import Navbar from "@/Components/shared/Navbar";
 import "./globals.css";
+import { Footer } from "@/Components/shared/Footer";
 
 
 
@@ -22,6 +23,9 @@ export default function RootLayout({ children }) {
         </div>
         <div className="py-10">
           {children}
+        </div>
+        <div>
+          <Footer></Footer>
         </div>
       </body>
     </html>

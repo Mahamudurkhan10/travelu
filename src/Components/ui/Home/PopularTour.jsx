@@ -76,8 +76,8 @@ const PopularTour = () => {
                                              {foods.map((food) => (
                                                   <SwiperSlide key={food._id}>
                                                        <div className=''>
-                                                            <Image width={500} height={500} src={food.image} alt='image'></Image>
-                                                            <div className='bg-base-100 p-4 space-y-3 ' >
+                                                            <Image width={500} className='rounded-xl' height={500} src={food.image} alt='image'></Image>
+                                                            <div className='bg-base-100 rounded-b-xl p-4 space-y-3 ' >
                                                               <h1 className='text-xl font-semibold'> {food.title} </h1>
                                                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat odio voluptatibus nesciunt suscipit. </p>
                                                                <div className='divider'></div>
@@ -102,9 +102,7 @@ const PopularTour = () => {
                          </div>
                     </div>
                </div>
-               <div className='h-screen'>
-
-               </div>
+             
           </div>
      );
 };

@@ -1,20 +1,11 @@
-import Banner from "@/Components/ui/Home/Banner";
-import Gallery from "@/Components/ui/Home/Gallery";
-import PopularTour from "@/Components/ui/Home/PopularTour";
-
-
+import HomePage from "@/Components/ui/Home/HomePage";
 
 
 export default function Home() {
   return (
   <div className="">
-    
-     <Banner></Banner>
-
-    <div className="">
-    <Gallery></Gallery>
-    </div>
-    <PopularTour></PopularTour>
+    <HomePage></HomePage>
+     
   </div>
   );
 }

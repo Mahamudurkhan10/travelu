@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Gallery() {
      return (
-          <div className='max-w-7xl  mx-auto mt-16'>
+          <div className='max-w-7xl  mx-auto mt-16 mb-12'>
                <div className='grid grid-cols-4 gap-3 text-white'>
                     <div className='bg-cover rounded-xl row-span-2 col-span-2 bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/7bGCqbr/img-01.jpg')" }}>
                          <div className='h-[500px] space-y-3 py-40  text-center'>
