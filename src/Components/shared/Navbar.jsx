@@ -43,7 +43,7 @@ const Navbar = () => {
                                         {navItems}
                               </ul>
                          </div>
-                         <a className="btn btn-ghost font-bold text-3xl"> <Backpack size={30} className='text-yellow-600' /> Travelu</a>
+                         <a className="btn btn-ghost font-mono text-3xl"> <Backpack size={30} className='text-yellow-600' /> Travelu</a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                          <ul className="menu menu-horizontal px-1">

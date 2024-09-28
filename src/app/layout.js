@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <div className="">
           <Navbar></Navbar>
         </div>
-        <div className="py-10">
+        <div className="py-20">
           {children}
         </div>
         <div>
