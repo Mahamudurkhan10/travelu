@@ -36,13 +36,13 @@ const Destinations = [
 ]
 const TopDestinations = () => {
      return (
-          <div className='my-16'>
+          <div className='mt-16'>
                <div className='text-center '>
                     <h1 className='flex justify-center items-center'>  <AudioWaveform className='font-bold' size={50} strokeWidth={1.5} /> </h1>
                     <h1 className='text-5xl py-4 font-semibold'> Top Destinations </h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod tempora pariatur rerum?</p>
                </div>
-               <div className='max-w-7xl  pt-10 grid grid-cols-6 mx-auto'>
+               <div className='max-w-7xl  pt-10 grid grid-cols-2 lg:grid-cols-6 mx-auto'>
                     {
                          Destinations.map((d, inx) => <div key={inx}>
                               <div className='text-center space-y-2'>
@@ -53,7 +53,7 @@ const TopDestinations = () => {
                          </div>)
                     }
                </div>
-               <div className='max-w-7xl  gap-4    grid grid-cols-6 mx-auto pt-12'>
+               <div className='max-w-7xl  gap-4    grid grid-cols-1 lg:grid-cols-6 mx-auto pt-12'>
                     <div className='bg-cover relative group rounded-xl opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl col-span-2 bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co/khk0TSk/img-15.jpg')" }}>
 
                          <div className='absolute rounded-xl  inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-60 transition-all duration-500'></div>
@@ -62,12 +62,12 @@ const TopDestinations = () => {
                               <h1 className='p-5 relative'>
 
 
-                                   <span className='absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:translate-y-[300px] transform transition-all duration-500 '>
+                                   <span className='absolute inset-0 opacity-0 group-hover:opacity-100 lg:group-hover:translate-y-[300px] group-hover:translate-y-12 transform transition-all duration-500 '>
                                         <button className='text-yellow-400 text-lg border-b-4 border-yellow-500 font-semibold'> View all Tours </button>
                                    </span>
 
 
-                                   <div className='opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex justify-between items-end pt-[500px]'>
+                                   <div className='opacity-100 group-hover:opacity-0 transition-opacity duration-300 flex justify-between items-end pt-52 lg:pt-[500px]'>
                                         <span className='flex items-center gap-3'>
                                              <MapPin /> North America
                                         </span>
@@ -86,7 +86,7 @@ const TopDestinations = () => {
                                    <h1 className='p-5 relative'>
 
 
-                                        <span className='absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:translate-y-12 transform transition-all duration-500 '>
+                                        <span className='absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:translate-y-12  transform transition-all duration-500 '>
                                              <button className='text-yellow-400 text-lg border-b-4 border-yellow-500 font-semibold'> View all Tours </button>
                                         </span>
 
@@ -134,12 +134,12 @@ const TopDestinations = () => {
                               <h1 className='p-5 relative'>
 
 
-                                   <span className='absolute inset-0 opacity-0 group-hover:opacity-100  group-hover:translate-y-[300px] transform transition-all duration-1000   '>
+                                   <span className='absolute inset-0 opacity-0 group-hover:opacity-100  lg:group-hover:translate-y-[300px] group-hover:translate-y-12 transform transition-all duration-1000   '>
                                         <button className='text-yellow-400 text-lg border-b-4 border-yellow-500 font-semibold'> View all Tours </button>
                                    </span>
 
 
-                                   <div className='opacity-100 group-hover:opacity-0 transition-opacity duration-700 flex justify-between items-end pt-[500px]'>
+                                   <div className='opacity-100 group-hover:opacity-0 transition-opacity duration-700 flex justify-between items-end lg:pt-[500px] pt-52'>
                                         <span className='flex items-center gap-3'>
                                              <MapPin /> North America
                                         </span>

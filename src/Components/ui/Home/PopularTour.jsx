@@ -41,12 +41,13 @@ const PopularTour = () => {
      ]
      return (
           <div>
-               <div className='bg-cover mt-5 bg-fixed bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/bP9jLhD/bgparallax-01-1.jpg')" }}>
-                    <div className='h-[800px]'>
+               <div className='bg-cover relative mt-5 bg-fixed bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/bP9jLhD/bgparallax-01-1.jpg')" }}>
+               <div className='absolute rounded-xl  inset-0 bg-[#191919] bg-opacity-10 '></div>
+                    <div className='h-[800px] '>
                          <div className='max-w-7xl pt-20   mx-auto '>
                                <div className='flex  justify-between'>
-                                   <h1 className='flex items-center gap-4 text-white text-3xl font-semibold'> Popular Tour  <AudioWaveform className='font-bold' size={30} strokeWidth={1.5} /> </h1>
-                                   <h1 className='btn border-b-4 text-white font-bold border-yellow-400 btn-outline'> ALL Tours </h1>
+                                   <h1 className='flex items-center gap-4  text-white  text-3xl font-bold'> Popular Tour  <AudioWaveform className='font-bold' size={30} strokeWidth={1.5} /> </h1>
+                                   <h1 className='text-white text-xl font-bold border-b-4 border-warning '> ALL Tours </h1>
                                </div>
                               <div className=' pt-7 mx-auto '>
                                    {foods.length > 0 && (
