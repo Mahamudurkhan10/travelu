@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="light" >
 
       <body
-        className={`  antialiased `}
+        className={`  antialiased  `}
       >
         <div className="">
           <Navbar></Navbar>
