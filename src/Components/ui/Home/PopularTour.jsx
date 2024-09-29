@@ -20,22 +20,22 @@ const PopularTour = () => {
           },
           {
                id:2,
-               image : "https://i.ibb.co.com/GHdTNGJ/img-01-1.jpg",
+               image : "https://i.ibb.co.com/f1RMy5H/img-10.jpg",
                 title:"Best of Canada Tours And Travel"
           },
           {
                id:3,
-               image : "https://i.ibb.co.com/GHdTNGJ/img-01-1.jpg",
+               image : "https://i.ibb.co.com/NnK7sxN/img-06.jpg",
                 title:"Best of Canada Tours And Travel"
           },
           {
                id:4,
-               image : "https://i.ibb.co.com/GHdTNGJ/img-01-1.jpg",
+               image : "https://i.ibb.co.com/SRzkLS8/img-07.jpg",
                 title:"Best of Canada Tours And Travel"
           },
           {
                id:5,
-               image : "https://i.ibb.co.com/GHdTNGJ/img-01-1.jpg",
+               image : "https://i.ibb.co.com/ckppttB/img-08.jpg",
                 title:"Best of Canada Tours And Travel"
           },
      ]

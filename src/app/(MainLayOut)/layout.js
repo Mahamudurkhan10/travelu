@@ -1,7 +1,7 @@
 
+import Navbar from "@/Components/shared/Navbar";
 
-import "./globals.css";
-
+import { Footer } from "@/Components/shared/Footer";
 
 
 
@@ -18,11 +18,15 @@ export default function RootLayout({ children }) {
       <body
         className={`  antialiased  `}
       >
-      
-        
+        <div className="">
+          <Navbar></Navbar>
+        </div>
+        <div className="pt-20">
           {children}
-    
-       
+        </div>
+        <div>
+          <Footer></Footer>
+        </div>
       </body>
     </html>
   );

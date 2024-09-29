@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black ">
       <div className=" p-3 lg:p-0 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl  ">
         <div className="grid gap-5 mb-8  pt-8  lg:grid-cols-6">
           <div className="grid gap-12 lg:col-span-4  md:grid-cols-3">
@@ -65,7 +65,7 @@ export const Footer = () => {
               <div className="flex gap-3 text-sm items-center ">
               <div className="w-20 h-20">
                   <Image
-                    src="https://i.ibb.co.com/wds0FcL/img-01-2.jpg"
+                    src="https://i.ibb.co.com/wzYj8r9/img-02-1.jpg"
                     alt="Bungee Jumping Trip"
                     width={80}
                     height={80}
@@ -73,7 +73,7 @@ export const Footer = () => {
                   />
                 </div>
                 <div>
-                  <h1 className="text-lg hover:text-warning hover:cursor-pointer"> Bungee Jumping Trip</h1>
+                  <h1 className="text-lg hover:text-warning hover:cursor-pointer"> Trip to White Castle</h1>
                   <p className="py-1">Nunc cursus libero purus congue arcu vitae pulvinar  </p>
                   <p className="text-[15px] font-semibold"> Feb 22, 2017 </p>
 

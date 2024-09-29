@@ -3,10 +3,10 @@
      return (
        <div className="bg-gray-100 h-screen flex flex-col justify-center items-center" style={{backgroundImage:"url('https://i.ibb.co.com/d7LcmmP/bgparallax-03.jpg')"}}>
           
-      <div className="tracking-widest mt-4 text-center">
+      <div className="tracking-widest  text-center">
            <span className="text-gray-200 text-9xl font-semibold block">404</span>
            <span className="text-gray-200 text-xl">
-             Sorry, we couldn't find what you're looking for!
+           
            </span>
          </div>
 
