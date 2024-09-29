@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { AlarmClock, Star } from 'lucide-react';
+
 const GuidesSwiper = ({ foods }) => {
      console.log(foods);
      const swiperRef = useRef()
@@ -22,7 +22,7 @@ const GuidesSwiper = ({ foods }) => {
                                    ref={swiperRef}
                                    modules={[Navigation, Pagination, Autoplay]}
                                    // autoplay={{ delay: 7000 }}
-                                   spaceBetween={20}
+                                   spaceBetween={25}
 
                                    pagination={{ clickable: true, type: 'custom' }}
                                    navigation={true}
@@ -46,11 +46,11 @@ const GuidesSwiper = ({ foods }) => {
                                         foods.map(food => <SwiperSlide key={food._id}>
                                              <div className=''>
                                                   <Image width={500} className='rounded-xl' height={500} src={food.image} alt='image'></Image>
-                                                  <div className='bg-base-100 rounded-b-xl p-4 space-y-3 ' >
+                                                  <div className='bg-base-100 rounded-b-xl  space-y-3 ' >
                                                        <div className='flex justify-between'>
-                                                            <div>
-                                                                 <h1 className='pl-3'> {food.name} </h1>
-                                                                 <h1 className='border-b-4 p-3'> {food.title} </h1>
+                                                            <div className=''>
+                                                                 <h1 className='text-2xl font-semibold'> {food.name} </h1>
+                                                                 <h1 className=' text-xl  '> {food.title} </h1>
                                                             </div>
                                                             <div className="flex items-center mt-4 space-x-4 sm:mt-0">
                                                                  <a
@@ -80,7 +80,7 @@ const GuidesSwiper = ({ foods }) => {
                                                                  </a>
                                                             </div>
                                                        </div>
-                                                     
+                                                       <div className="divider"></div>
 
                                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat odio voluptatibus nesciunt suscipit. </p>
 

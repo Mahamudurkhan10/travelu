@@ -119,7 +119,7 @@ export const Footer = () => {
         </div>
 
       </div>
-      <div className="flex flex-col justify-center  text-lg py-2   bg-[#191919] border-t border-gray-500 sm:flex-row">
+      <div className="flex flex-col justify-center  text-lg py-2   bg-[#191919] mt-3 border-gray-500 sm:flex-row">
         <p className=" text-gray-600">
           © Copyright 2020 Lorem Inc. All rights reserved.
         </p>

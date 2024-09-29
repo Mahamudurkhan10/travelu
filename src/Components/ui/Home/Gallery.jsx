@@ -34,10 +34,6 @@ export default function Gallery() {
 
                          </div>
                     </div>
-
-
-
-
                </div>
                <section className='mt-12 grid gap-5 grid-cols-1 lg:grid-cols-3'>
                     <div>
