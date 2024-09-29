@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const GuidesSwiper = ({ foods }) => {
-     console.log(foods);
+    
      const swiperRef = useRef()
      return (
           <div>
