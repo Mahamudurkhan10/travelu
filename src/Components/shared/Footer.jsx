@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <div className="bg-black ">
+    <div className="bg-black  ">
       <div className=" p-3 lg:p-0 mx-auto sm:max-w-xl md:max-w-full lg:max-w-7xl  ">
-        <div className="grid gap-5 mb-8  pt-8  lg:grid-cols-6">
+        <div className="grid gap-5   pt-8  lg:grid-cols-6">
           <div className="grid gap-12 lg:col-span-4  md:grid-cols-3">
             <div className="text-gray-300 space-y-3">
               <p className=" tracking-wide font-semibold text-2xl ">

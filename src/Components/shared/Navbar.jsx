@@ -13,7 +13,7 @@ const Navbar = () => {
      const navItems = <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>
           <Link href={'/'}  ><li className={pathName === '/' ? 'text-warning font-bold' : ''} >Home</li></Link>
           <Link href={'/destination'}><li  className={pathName === '/destination' ? 'text-warning font-bold' : ''}> Destination </li></Link>
-          <Link href={'/'}><li> About Us </li></Link>
+          <Link href={'/aboutUs'}><li className={pathName === '/aboutUs' ? 'text-warning font-bold' : ''}> About Us </li></Link>
           <Link href={'/'}><li> Contact Us </li></Link>
           <Link href={'/'}><li> Blog </li></Link>
          

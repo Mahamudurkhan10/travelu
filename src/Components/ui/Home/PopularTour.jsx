@@ -1,5 +1,5 @@
 'use client'
-import React, {  useRef } from 'react';
+
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,9 +9,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Image from 'next/image';
 import { AlarmClock, AudioWaveform, Star } from 'lucide-react';
+import { useRef } from 'react';
 
 const PopularTour = () => {
-     const swiperRef = useRef(null);
+     const swiperRef = useRef()
      const foods = [
           {
                id:1,
@@ -41,7 +42,7 @@ const PopularTour = () => {
      ]
      return (
           <div>
-               <div className='bg-cover relative mt-5 bg-fixed bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/bP9jLhD/bgparallax-01-1.jpg')" }}>
+               <div className='bg-cover relative mt-5 bg-fixed bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/bP9jLhD/bgparallax-01-1.jpg')"}}>
                <div className='absolute rounded-xl  inset-0 bg-[#191919] bg-opacity-10 '></div>
                     <div className='h-[800px] '>
                          <div className='max-w-7xl pt-20   mx-auto '>
