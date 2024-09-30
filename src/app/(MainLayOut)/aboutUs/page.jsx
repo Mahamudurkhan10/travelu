@@ -1,10 +1,10 @@
-import AboutSection from '@/Components/ui/AboutUs/AboutSection'
-import AboutUs from '@/Components/ui/AboutUs/AboutUs'
-import AboutUsBanner from '@/Components/ui/AboutUs/AboutUsBanner'
-import AskQuestion from '@/Components/ui/AboutUs/AskQuestion'
-import MeetGuides from '@/Components/ui/AboutUs/MeetGuides'
-import NextTravel from '@/Components/ui/AboutUs/NextTravel'
-import Partner from '@/Components/ui/Home/Partner'
+import AboutSection from '@/Components/ui/MainLayout/AboutUs/AboutSection'
+import AboutUs from '@/Components/ui/MainLayout/AboutUs/AboutUs'
+import AboutUsBanner from '@/Components/ui/MainLayout/AboutUs/AboutUsBanner'
+import AskQuestion from '@/Components/ui/MainLayout/AboutUs/AskQuestion'
+import MeetGuides from '@/Components/ui/MainLayout/AboutUs/MeetGuides'
+import NextTravel from '@/Components/ui/MainLayout/AboutUs/NextTravel'
+import Partner from '@/Components/ui/MainLayout/Home/Partner'
 
 
 export default function AboutPage() {

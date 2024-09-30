@@ -1,26 +1,54 @@
- 
- const error = () => {
-     return (
-       <div className="bg-gray-100 h-screen flex flex-col justify-center items-center" style={{backgroundImage:"url('https://i.ibb.co.com/d7LcmmP/bgparallax-03.jpg')"}}>
-          
-      <div className="tracking-widest  text-center">
-           <span className="text-gray-200 text-9xl font-semibold block">404</span>
-           <span className="text-gray-200 text-xl">
-           
-           </span>
-         </div>
 
-         <div className="mt-6">
-           <a
-             href="/"
-             className=" animate-pulse px-6  font-mono btn btn-warning text-xl p-3 rounded-md hover:shadow-md transition-shadow duration-300"
-           >
-             Go back
-           </a>
-         </div>
-       </div>
-     );
-   };
-   
-   export default error;
-   
+const error = () => {
+  return (
+    <div className="bg-gray-100 h-screen flex flex-col justify-center items-center" style={{ backgroundImage: "url('https://i.ibb.co.com/d7LcmmP/bgparallax-03.jpg')" }}>
+
+      <div className="tracking-widest  text-center">
+        <span className="text-gray-200 text-9xl font-mono block">404</span>
+         <span className="text-3xl text-gray-200 font-mono ">Page not Found</span>
+        <span className="text-gray-200 text-xl">
+        Sorry but the page that you are looking for does not exist...
+        </span>
+      </div>
+
+      <div className="mt-6">
+        <a
+          href="/" className="animate-pulse"
+          
+        >
+          <button
+            class="relative  flex items-center  px-6 py-3 overflow-hidden font-medium transition-all bg-[#e7a500] rounded-md group"
+          >
+            <span
+              class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-[#e7a500] rounded group-hover:-mr-4 group-hover:-mt-4"
+            >
+              <span
+                class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+              ></span>
+            </span>
+            <span
+              class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-white rounded group-hover:-ml-4 group-hover:-mb-4"
+            >
+              <span
+                class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+              ></span>
+            </span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-white rounded-md group-hover:translate-x-0"
+            >
+
+            </span>
+            <span
+              class="relative uppercase underline font-semibold w-full text-left text-white  transition-colors duration-200 ease-in-out group-hover:text-[#191919]"
+            >
+             Go Back To Home
+            </span >
+
+          </button>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default error;

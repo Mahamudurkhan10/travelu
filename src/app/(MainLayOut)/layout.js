@@ -2,6 +2,7 @@
 import Navbar from "@/Components/shared/Navbar";
 
 import { Footer } from "@/Components/shared/Footer";
+import AuthProvider from "@/services/AuthProvider";
 
 
 
@@ -21,9 +22,11 @@ export default function RootLayout({ children }) {
         <div className="">
           <Navbar></Navbar>
         </div>
+        <AuthProvider>
         <div className="pt-20">
           {children}
         </div>
+        </AuthProvider>
         <div>
           <Footer></Footer>
         </div>

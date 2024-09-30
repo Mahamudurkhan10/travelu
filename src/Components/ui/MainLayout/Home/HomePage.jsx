@@ -6,6 +6,7 @@ import TopDestinations from './TopDestinations';
 import Trending from './Trending';
 import Partner from './Partner';
 
+
 const HomePage = () => {
      return (
           <div>
@@ -17,7 +18,9 @@ const HomePage = () => {
                <PopularTour></PopularTour>
                <TopDestinations></TopDestinations>
                <Trending></Trending>
+               
                <Partner></Partner>
+             
           </div>
      );
 };

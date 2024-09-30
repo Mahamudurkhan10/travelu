@@ -6,7 +6,7 @@ const AboutSection = () => {
                <div className='mt-12 grid gap-5 grid-cols-1 lg:grid-cols-3'>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>01</span> Luxury Hotels </h1>
-                         <p className='py-3 text-[15px]'>Experience the epitome of luxury with our handpicked hotels, offering world-class comfort, stunning locations, and personalized services. Enjoy elegant suites, gourmet dining, and rejuvenating spa treatments. Whether you're seeking a serene getaway or a vibrant city escape, our luxury hotels ensure an unforgettable travel experience tailored just for you.  </p>
+                         <p className='py-3 text-[15px]'>Experience the epitome of luxury with our handpicked hotels, offering world-class comfort, stunning locations, and personalized services. Enjoy elegant suites, gourmet dining, and rejuvenating spa treatments. Whether you are seeking a serene getaway or a vibrant city escape, our luxury hotels ensure an unforgettable travel experience tailored just for you.  </p>
                     </div>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>02</span> Tourist Guide </h1>
@@ -19,7 +19,7 @@ const AboutSection = () => {
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>04</span> Travel Insurance </h1>
                          <p className='py-3 text-[15px]'> **Travel Insurance**  
-                         Protect your trip with comprehensive travel insurance. Coverage includes medical emergencies, trip cancellations, lost luggage, and flight delays. Whether you're facing unexpected illness, missed flights, or baggage mishaps, our plans ensure peace of mind with 24/7 global assistance, helping you travel worry-free.</p>
+                         Protect your trip with comprehensive travel insurance. Coverage includes medical emergencies, trip cancellations, lost luggage, and flight delays. Whether you are facing unexpected illness, missed flights, or baggage mishaps, our plans ensure peace of mind with 24/7 global assistance, helping you travel worry-free.</p>
                     </div>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>05</span> Airport Transfers </h1>
@@ -28,7 +28,7 @@ const AboutSection = () => {
                     </div>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>06</span> Travel Blogs </h1>
-                         <p className='py-3 text-[15px]'> Enhance your travel experience with featured blogs and articles on trending topics like Top 10 Romantic Destinations,Best Family-Friendly Resorts, and Budget Travel Tips." Discover expert insights, destination guides, and insider advice to help you plan the perfect getaway, whether for romance, family fun, or budget-friendly adventures.</p>
+                         <p className='py-3 text-[15px]'> Enhance your travels experience with featured blogs and articles on trending topics like Top 10 Romantic Destinations,Best Family-Friendly Resorts, and Budget Travel Tips. Discover expert insights, destination guides, and insider advice to help you plan the perfect getaway, whether for romance, family fun, or budget-friendly adventures.</p>
                     </div>
                </div>
           </div>
