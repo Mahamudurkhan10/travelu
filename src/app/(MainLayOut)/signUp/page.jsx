@@ -1,4 +1,6 @@
+'use client'
 import SocialLogin from '@/Components/shared/SocialLogin';
+import axios from 'axios';
 import Link from 'next/link';
 
 import React from 'react';
@@ -10,7 +12,16 @@ const SignUp = () => {
           const name = e.target.name.value;
           const password = e.target.password.value;
           const photo = e.target.photo.value;
-          const res = await      
+          const User = {email,name,password,photo,role:"admin"}
+          console.log(User);
+          try {
+               const res = await axios.post("http://localhost:3000/signUp/api",User)    
+               console.log(res);
+               
+          } catch (error) {
+               console.log(error);
+          }
+         
      }
      return (
           <div>
@@ -20,7 +31,7 @@ const SignUp = () => {
                               <h1 className="text-3xl text-center text-black font-medium">Sign Up Your Account</h1>
                               <div className=" flex flex-col items-center">
                                    <div className="w-full flex-1 mt-8">
-                                        <form  action="">
+                                        <form onSubmit={handleSignUp}  action="">
                                              <div className="mx-auto max-w-xs ">
                                                   <div className='space-y-4 contact-input'>
                                                        <input type="text" className='border w-full p-2' name="name" placeholder="Your Name" />

@@ -1,5 +1,5 @@
-import { MongoClient } from "mongodb";
-
+import { MongoClient, ServerApiVersion } from "mongodb";
+ 
 
 let db;
 let client;
@@ -7,7 +7,7 @@ let client;
 export default async function ConnectDB() {
      if (db) return db;
      try {
-          const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@atlascluster.6gwdl3v.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster`;
+          const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@atlascluster.6gwdl3v.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster`;
           if (!uri) {
                throw new Error("Please define the MONGODB_URI environment variable");
             }
