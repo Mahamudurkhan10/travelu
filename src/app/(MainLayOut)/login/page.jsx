@@ -1,10 +1,28 @@
+'use client'
 import SocialLogin from '@/Components/shared/SocialLogin';
 
 import Link from 'next/link';
+import {signIn} from "next-auth/react"
+import { useRouter } from 'next/navigation';
+
 
 
 const Login = () => {
-     
+     const router = useRouter()
+     const handleLogin =async(e)=>{
+          e.preventDefault()
+          const email = e.target.email.value;
+          const password = e.target.password.value;
+          console.log(email,password);
+          const resp = await signIn("credentials",{
+               email,
+               password,
+               redirect:false
+          });
+          if(resp.ok){
+               router.push('/')
+          }
+     }
      return (
           <div>
                 <div className="flex justify-center items-center mt-3 ">
@@ -13,12 +31,12 @@ const Login = () => {
                               <h1 className="text-3xl text-center text-black font-medium"> Login Your Account</h1>
                               <div className=" flex flex-col items-center">
                                    <div className="w-full flex-1 mt-8">
-                                        <form  action="">
+                                        <form onSubmit={handleLogin}  action="">
                                              <div className="mx-auto max-w-xs ">
                                                   <div className='space-y-9 contact-input'>
                                                        <input type="email"className='border w-full p-2' required name="email" placeholder="Your Email" />
                                                        <input type="password"className='border w-full p-2' name="password" placeholder="Your Password" />
-                                                       <div className="tracking-wide font-semibold bg-[#fabd68] text-black w-full py-4 rounded hover:bg-[#ffb144] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none" >
+                                                       <button className="tracking-wide font-semibold bg-[#fabd68] text-black w-full py-4 rounded hover:bg-[#ffb144] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none" >
                                                             <svg
                                                                  className="w-6 h-6 -ml-2"
                                                                  fill="none"
@@ -32,7 +50,7 @@ const Login = () => {
                                                                  <path d="M20 8v6M23 11h-6" />
                                                             </svg>
                                                             <span className="ml-3">Login</span>
-                                                       </div>
+                                                       </button>
                                                   </div>
                                                   <div className="mt-4 mb-8 border-b text-center">
                                                        <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">OR</div>

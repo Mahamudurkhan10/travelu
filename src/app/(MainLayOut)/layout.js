@@ -19,17 +19,19 @@ export default function RootLayout({ children }) {
       <body
         className={`  antialiased  `}
       >
+           <AuthProvider>
         <div className="">
           <Navbar></Navbar>
         </div>
-        <AuthProvider>
+     
         <div className="pt-20">
           {children}
         </div>
-        </AuthProvider>
+       
         <div>
           <Footer></Footer>
         </div>
+        </AuthProvider>
       </body>
     </html>
   );

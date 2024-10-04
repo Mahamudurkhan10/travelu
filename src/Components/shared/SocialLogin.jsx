@@ -1,9 +1,13 @@
+import { signIn } from 'next-auth/react';
 import React from 'react';
 
 const SocialLogin = () => {
+     const handleSocialLogin = async (provider) =>{
+          const resp = await signIn(provider)
+     }
      return (
           <div>
-               <div  className="min-w-[320px] font-bold rounded py-3 px-4 bg-indigo-100 flex items-center justify-center">
+               <div onClick={()=> handleSocialLogin('google')} className="min-w-[320px] cursor-pointer font-bold rounded py-3 px-4 bg-indigo-100 flex items-center justify-center">
                     <div className="bg-white p-2 rounded-full">
                          <svg className="w-4" viewBox="0 0 533.5 544.3">
                               <path
@@ -24,7 +28,7 @@ const SocialLogin = () => {
                               />
                          </svg> 
                     </div>
-                    <span className="ml-4">Sign Up with Google</span>
+                    <span className="ml-4">Sign Up with Google</span> 
                </div>
           </div>
      );

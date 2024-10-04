@@ -2,10 +2,13 @@
 import SocialLogin from '@/Components/shared/SocialLogin';
 import axios from 'axios';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
 
 import React from 'react';
 
 const SignUp = () => {
+     const router = useRouter()
      const handleSignUp = async(e) =>{
           e.preventDefault()
           const email = e.target.email.value;
@@ -13,11 +16,14 @@ const SignUp = () => {
           const password = e.target.password.value;
           const photo = e.target.photo.value;
           const User = {email,name,password,photo,role:"admin"}
-          console.log(User);
+      
           try {
                const res = await axios.post("http://localhost:3000/signUp/api",User)    
-               console.log(res);
                
+               if(res.status === 200){
+                    router.push('/login')
+               }
+             
           } catch (error) {
                console.log(error);
           }
