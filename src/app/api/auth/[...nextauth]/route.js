@@ -38,7 +38,44 @@ const handler = NextAuth({
           }),
 
      ],
-     callbacks: {},
+     callbacks: {
+          async jwt({ token, user, account }) {
+               if (account) {
+                   if (account.provider === 'google' ) {
+                       const { name, email, image } = user;
+                       try {
+                           const db = await ConnectDB();
+                           const userCollection = db.collection('users');
+                           let userExist = await userCollection.findOne({ email });
+                           if (!userExist) {
+                               const newUser = { name, email, image,role:'user' };
+                               await userCollection.insertOne(newUser);
+                           }
+                           
+                           token.name = name;
+                           token.email = email;
+                           token.image = image;
+                       } catch (error) {
+                           console.error('Error handling social login:', error);
+                       }
+                   }
+               } 
+               if (user) {
+                   token.id = user._id;
+                   token.email = user.email;
+               }
+               return token;
+           },
+           async session({ session, token }) {
+               if (token) {
+                   session.user.id = token.id;
+                   session.user.email = token.email;
+                   session.user.name = token.name; // If you added name in JWT callback
+                   session.user.image = token.image; // If you added image in JWT callback
+               }
+               return session;
+           },
+     },
      pages: {
           signIn: '/login'
      },

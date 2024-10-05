@@ -11,7 +11,7 @@ import React from 'react';
 
 const Navbar = () => {
      const session = useSession()
-     console.log(session);
+     // console.log(session);
      const pathName = usePathname()
 
      const navItems = <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>

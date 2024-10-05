@@ -15,7 +15,7 @@ const SignUp = () => {
           const name = e.target.name.value;
           const password = e.target.password.value;
           const photo = e.target.photo.value;
-          const User = {email,name,password,photo,role:"admin"}
+          const User = {email,name,password,photo,role:"user"}
       
           try {
                const res = await axios.post("http://localhost:3000/signUp/api",User)    

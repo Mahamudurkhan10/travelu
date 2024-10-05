@@ -1,13 +1,24 @@
-import { signIn } from 'next-auth/react';
+
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+
+
 import React from 'react';
 
 const SocialLogin = () => {
-     const handleSocialLogin = async (provider) =>{
+     const router = useRouter()
+     const session = useSession();
+     
+     const handleSocialLogin = async (provider) => {
           const resp = await signIn(provider)
+       
+     }
+     if(session.status ==='authenticated'){
+          router.push('/')
      }
      return (
-          <div>
-               <div onClick={()=> handleSocialLogin('google')} className="min-w-[320px] cursor-pointer font-bold rounded py-3 px-4 bg-indigo-100 flex items-center justify-center">
+          <div >
+               <div onClick={() => handleSocialLogin('google')} className="min-w-[320px] cursor-pointer font-bold rounded py-3 px-4 bg-indigo-100 flex items-center justify-center">
                     <div className="bg-white p-2 rounded-full">
                          <svg className="w-4" viewBox="0 0 533.5 544.3">
                               <path
@@ -26,9 +37,9 @@ const SocialLogin = () => {
                                    d="M272.1 107.7c38.8-.6 76.3 14 104.4 40.8l77.7-77.7C405 24.6 339.7-.8 272.1 0 169.2 0 75.1 58 28.9 150l90.4 70.1c21.5-64.5 81.8-112.4 152.8-112.4z"
                                    fill="#ea4335"
                               />
-                         </svg> 
+                         </svg>
                     </div>
-                    <span className="ml-4">Sign Up with Google</span> 
+                    <span className="ml-4">Sign Up with Google</span>
                </div>
           </div>
      );
