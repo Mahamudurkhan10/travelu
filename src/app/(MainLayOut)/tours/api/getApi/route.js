@@ -10,7 +10,10 @@ export const GET = async(request,) =>{
           const place = searchParams.get("place")
           const search = searchParams.get("search")
           const category = searchParams.get("category")
-          console.log(place)
+          const page = searchParams.get('page')
+          const limit = searchParams.get('limit')
+          
+          
           let query = {}
           if(place){
                query.place = place;
@@ -28,9 +31,11 @@ export const GET = async(request,) =>{
           else if(category){
                query.category = category;
           }
-          const tours = await db.collection("tours").find(query).toArray()
+          const tours = await db.collection("tours").find(query).skip((page -1)* limit).limit(parseInt(limit)).toArray()
+          const totalTours = await db.collection("tours").countDocuments(query)
+          const totalPages = Math.ceil(totalTours/limit)
           return new NextResponse(
-               JSON.stringify(tours),
+               JSON.stringify({tours,totalPages}),
                {status:200}
           )
      } catch (error) {
