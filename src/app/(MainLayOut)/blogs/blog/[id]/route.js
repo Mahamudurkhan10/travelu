@@ -1,14 +1,19 @@
 import ConnectDB from "@/lib/ConnectDB";
+import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
 
 
- export const GET = async(request)=>{
+ export const GET = async(request,{params})=>{
+     const {id} = params
+    
      try {
           const db = await ConnectDB();
           const blogCollection = db.collection("blogs")
-          const resp = await blogCollection.find().toArray()
+          const query = ({_id : new ObjectId(id)})
+          
+          const blog = await blogCollection.findOne(query)
           return new NextResponse(
-               JSON.stringify({ resp }), // Respond with the fetched blogs
+               JSON.stringify(blog), // Respond with the fetched blogs
                { status: 200 } // Success status
              );
      } catch (error) {

@@ -5,7 +5,7 @@ const AskQuestion = () => {
      return (
           <div className='max-w-7xl mx-auto'>
                <section className=" dark:text-gray-800">
-                    <div className="    ">
+                    <div className="">
 
                          <h2 className="mb-5 text-xl font-semibold leading-none text-start sm:text-5xl">Need Help?</h2>
                          <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum dolor.</p>

@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link href={'/tours'}><li className={pathName === '/tours' ? 'text-warning font-bold ' : 'font-semibold'}> Tours </li></Link>
           <Link href={'/blogs'}><li className={pathName === '/blogs' ? 'text-warning font-bold' : 'font-semibold'}> Blog </li></Link>
           <Link href={'/contactUs'}><li className={pathName === '/contactUs' ? 'text-warning font-bold' : 'font-semibold'}> Contact Us </li></Link>
-
+         
      </div>
      return (
           <div>
