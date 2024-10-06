@@ -1,7 +1,7 @@
 'use client'
 import LatestArticle from '@/Components/ui/MainLayout/ContactUs/LatestArticle';
 import axios from 'axios';
-import { AlarmClock, Calendar, LocateOffIcon, Star } from 'lucide-react';
+import { AlarmClock, Calendar, CalendarDays, LocateOffIcon, MapPin, MapPinned, Star } from 'lucide-react';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ const TourDetails = () => {
     const router = useRouter()
      const [tour, setTour] = useState()
      const [number, setNumber] = useState(1)
-    
+    console.log(session)
      const newPrice = tour?.price*number
      useEffect(() => {
           const fetchBlog = async () => {
@@ -25,7 +25,7 @@ const TourDetails = () => {
           fetchBlog()
      }, [params.id])
     
-     const handleSubmit = (e) =>{
+     const handleSubmit = async (e) =>{
           e.preventDefault()
           setNumber(e.target.num.value)
           const book = {
@@ -35,8 +35,13 @@ const TourDetails = () => {
                price:newPrice,
                person: number,
                description: tour?.description,
+               email: session.data.user.email,
+               userPhoto : session.data.user.image,
+               reviews : tour?.reviews,
+               title: tour?.title
                
           }
+          console.log(book)
      }
      
      if(session.data === null){
@@ -48,7 +53,7 @@ const TourDetails = () => {
                     <div className="flex  gap-5 ">
 
                          <Image src={tour?.image} width={600} height={500} alt="main image" className="rounded-xl hover:shadow-2xl"></Image>
-                         <div className="p-16 border w-2/5 hover:shadow-2xl shadow-lg rounded-xl">
+                         <div className=" p-7 border w-2/5 hover:shadow-2xl shadow-lg rounded-xl">
                            
                               <div className="flex text-xl font-semibold mb-2 justify-between" >
                                    <h1 className=""> {tour?.place} </h1>
@@ -97,10 +102,10 @@ const TourDetails = () => {
                                    </form>
                                  <Link href={"/tours"} className=" px-6 uppercase btn btn-warning btn-outline"> go back</Link>
                                  <div className="divider"></div>
-                                 <div>
-                                    <h1> <AlarmClock></AlarmClock> 12 Days 11 Nights </h1>
-                                    <h1> <Calendar></Calendar> Availability May 12 </h1>
-                                    <h1> <LocateOffIcon></LocateOffIcon> {tour?.place} </h1>
+                                 <div className="flex gap-5 " >
+                                    <h1 className="flex hover:text-warning items-center gap-2"> <AlarmClock></AlarmClock> 12 Days 11 Nights </h1>
+                                    <h1 className="flex hover:text-warning items-center gap-2"> <CalendarDays /> Availability May 12 </h1>
+                                    <h1 className="flex hover:text-warning font-semibold items-center gap-2"> <MapPinned></MapPinned> {tour?.place} </h1>
                                  </div>
                               </div>
                          </div>
