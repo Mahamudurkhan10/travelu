@@ -8,14 +8,18 @@ import { usePathname } from 'next/navigation';
 
 
 import React from 'react';
+import useUser from '../hooks/useUser';
+
 
 const Navbar = () => {
+     const [User] = useUser()
      const session = useSession()
      // console.log(session);
      const pathName = usePathname()
 
      const navItems = <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>
           <Link href={'/'}  ><li className={pathName === '/' ? 'text-warning font-bold' : 'font-semibold'} >Home</li></Link>
+          
           <Link href={'/destination'}><li className={pathName === '/destination' ? 'text-warning font-bold' : 'font-semibold'}> Destination </li></Link>
           <Link href={'/aboutUs'}><li className={pathName === '/aboutUs' ? 'text-warning font-bold' : 'font-semibold'}> About Us </li></Link>
           <Link href={'/tours'}><li className={pathName === '/tours' ? 'text-warning font-bold ' : 'font-semibold'}> Tours </li></Link>

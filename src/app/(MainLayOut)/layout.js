@@ -2,10 +2,12 @@
 import Navbar from "@/Components/shared/Navbar";
 
 import { Footer } from "@/Components/shared/Footer";
-import AuthProvider from "@/services/AuthProvider";
+
+
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Providers from "@/services/Provider";
 
 export const metadata = {
   title: "Travelu",
@@ -20,7 +22,8 @@ export default function RootLayout({ children }) {
       <body
         className={`  antialiased  `}
       >
-           <AuthProvider>
+          
+        <Providers>
         <div className="">
           <Navbar></Navbar>
         </div>
@@ -33,7 +36,8 @@ export default function RootLayout({ children }) {
           <Footer></Footer>
         </div>
         <ToastContainer position="top-right" autoClose={3000}/>
-        </AuthProvider>
+        </Providers>
+       
       </body>
     </html>
   );
