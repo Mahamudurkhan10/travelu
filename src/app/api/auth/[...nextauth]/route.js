@@ -48,7 +48,7 @@ const handler = NextAuth({
                            const userCollection = db.collection('users');
                            let userExist = await userCollection.findOne({ email });
                            if (!userExist) {
-                               const newUser = { name, email, image,role:'user' };
+                               const newUser = { name, email, photo:image,role:'user' };
                                await userCollection.insertOne(newUser);
                            }
                            

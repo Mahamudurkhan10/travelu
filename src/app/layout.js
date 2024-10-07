@@ -2,6 +2,7 @@
 
 import AuthProvider from "@/services/AuthProvider";
 import "./globals.css";
+import Providers from "@/services/Provider";
 
 
 
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
 
 
       <body  > 
-       {children}   
+       <Providers>
+        {children}   
+       </Providers>
      
       </body>
 

@@ -1,4 +1,5 @@
 'use client'
+import useUser from '@/Components/hooks/useUser';
 import axios from 'axios';
 import { AlarmClock, Star, Torus } from 'lucide-react';
 import { useSession } from 'next-auth/react';
@@ -8,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 
 const AllTours = () => {
      const session = useSession()
+     const [User, refetch] = useUser()
      console.log(session)
      const [tours, setTours] = useState();
      const [selectedPlace, setSelectedPlace] = useState('');
@@ -21,7 +23,7 @@ const AllTours = () => {
           const fetchTours = async () => {
                
                try {
-                    const res = await axios.get('http://localhost:3000/tours/api/getApi', {
+                    const res = await axios.get('http://localhost:3000/dataBase/api/getApi', {
                          params: { place: selectedPlace, search: selectedSearch, category: selectCategory, limit, page }
 
                     });
@@ -168,7 +170,7 @@ const AllTours = () => {
                                         </div>
                                         <div className="pt-7">
                                              {
-                                                  session.data === null ? <Link href={`/login`} className={""}><button
+                                                  !User ? <Link href={`/login`} className={""}><button
                                                   class="relative flex items-center  px-6 py-3 overflow-hidden font-medium transition-all bg-[#e7a500] rounded-md group"
                                              >
                                                   <span
@@ -197,7 +199,7 @@ const AllTours = () => {
                                                   </span >
 
                                              </button></Link>:
-                                                  <Link href={`/tours/${tour._id}`} className={""}><button
+                                                  <Link href={`/tours/${tour._id}`} ><button
                                                        class="relative flex items-center  px-6 py-3 overflow-hidden font-medium transition-all bg-[#e7a500] rounded-md group"
                                                   >
                                                        <span

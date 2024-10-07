@@ -8,7 +8,7 @@ const useUser = () => {
     const {data: User =[],refetch, ispending:loading} = useQuery({
       queryKey:["users",session?.data?.user?.email],
       queryFn: async ()=>{
-          const res = await axios.get(`http://localhost:3000/tours/api/user`,{
+          const res = await axios.get(`http://localhost:3000/dataBase/api/user`,{
                params:{email:session?.data?.user?.email}
           })
           console.log(res.data)
