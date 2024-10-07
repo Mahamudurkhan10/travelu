@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const TourDetails = () => {
      const params = useParams()
@@ -14,7 +15,7 @@ const TourDetails = () => {
     const router = useRouter()
      const [tour, setTour] = useState()
      const [number, setNumber] = useState(1)
-    console.log(session)
+    
      const newPrice = tour?.price*number
      useEffect(() => {
           const fetchBlog = async () => {
@@ -41,7 +42,19 @@ const TourDetails = () => {
                title: tour?.title
                
           }
-          console.log(book)
+          
+          try {
+               const res = await axios.post("http://localhost:3000/tours/api/tourBoking",book)
+               if(res.status === 200){
+                    toast.success("Aded to boking succesffy")
+                    e.target.reset()
+                    router.push('/')
+               }
+               
+          } catch (error) {
+               console.log("error is comming ", error)
+               
+          }
      }
      
      if(session.data === null){

@@ -4,7 +4,8 @@ import Navbar from "@/Components/shared/Navbar";
 import { Footer } from "@/Components/shared/Footer";
 import AuthProvider from "@/services/AuthProvider";
 
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: "Travelu",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <div>
           <Footer></Footer>
         </div>
+        <ToastContainer position="top-right" autoClose={3000}/>
         </AuthProvider>
       </body>
     </html>
