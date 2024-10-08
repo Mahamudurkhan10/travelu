@@ -3,17 +3,25 @@ import React from 'react';
 import useUser from '../hooks/useUser';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { Book, Settings, User2Icon, UserCheckIcon } from 'lucide-react';
+import Image from 'next/image';
 
 const DashboardNavbar = () => {
      // const session = useSession()
      // console.log(session)
+     
      const [User] = useUser()
      return (
           <div className=" ">
-               <div className="space-y-3">
-                    <h1 className="text-3xl font-semibold">  User Dashboard  </h1>
-                    <Link href="/dashboard/user/userHome" className="btn w-full text-warning font-bold"> User Home </Link>
-                    <Link href="/dashboard/user/myBokings" className="btn w-full text-warning font-bold"> My Bokings </Link>
+               <div className="space-y-4">
+                    <h1 className="text-3xl text-center text-white font-semibold flex items-center gap-2 "> <Image src={User?.photo || "https://i.ibb.co.com/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg" } width={30} height={20} alt="user photo" className="rounded-full" ></Image>  User Dashboard  </h1>
+                    <div className="divider" ></div>
+                    <div className="flex flex-col gap-4">
+                    <Link href="/dashboard/user/userHome" className="btn  text-warning  font-bold"> <UserCheckIcon></UserCheckIcon> User Home </Link>
+                    <Link href="/dashboard/user/myBokings" className="btn  text-warning  font-bold"> <Book></Book> My Bokings </Link>
+                    <Link href="/dashboard/user/userSetting" className=" btn text-warning text-lg font-bold"> <Settings></Settings>  Settings </Link>
+                    
+                    </div>
                </div>
 
                <ul className="w-full pt-12 mt-12" >

@@ -10,7 +10,7 @@ import useUser from '@/Components/hooks/useUser';
 
 const Login = () => {
      const router = useRouter()
-     const [User,refetch,] = useUser()
+    
      const handleLogin =async(e)=>{
           e.preventDefault()
           const email = e.target.email.value;
@@ -23,7 +23,7 @@ const Login = () => {
           });
           console.log(resp)
           if(resp.ok){
-               refetch()
+              
                router.push('/')
           }
      }
