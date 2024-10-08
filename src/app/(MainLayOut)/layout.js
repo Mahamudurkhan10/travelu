@@ -8,6 +8,7 @@ import { Footer } from "@/Components/shared/Footer";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Providers from "@/services/Provider";
+import AuthProvider from "@/services/AuthProvider";
 
 export const metadata = {
   title: "Travelu",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={`  antialiased  `}
       >
-          
+          <AuthProvider>
         <Providers>
         <div className="">
           <Navbar></Navbar>
@@ -37,7 +38,7 @@ export default function RootLayout({ children }) {
         </div>
         <ToastContainer position="top-right" autoClose={3000}/>
         </Providers>
-       
+        </AuthProvider>
       </body>
     </html>
   );

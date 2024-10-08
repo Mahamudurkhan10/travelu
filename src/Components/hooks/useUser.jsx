@@ -5,6 +5,7 @@ import React from 'react';
 
 const useUser = () => {
     const session = useSession()
+    console.log(session)
     const {data: User =[],refetch, ispending:loading} = useQuery({
       queryKey:["users",session?.data?.user?.email],
       queryFn: async ()=>{

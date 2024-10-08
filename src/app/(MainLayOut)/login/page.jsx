@@ -4,22 +4,26 @@ import SocialLogin from '@/Components/shared/SocialLogin';
 import Link from 'next/link';
 import {signIn} from "next-auth/react"
 import { useRouter } from 'next/navigation';
+import useUser from '@/Components/hooks/useUser';
 
 
 
 const Login = () => {
      const router = useRouter()
+     const [User,refetch,] = useUser()
      const handleLogin =async(e)=>{
           e.preventDefault()
           const email = e.target.email.value;
           const password = e.target.password.value;
-          console.log(email,password);
+          
           const resp = await signIn("credentials",{
                email,
                password,
                redirect:false
           });
+          console.log(resp)
           if(resp.ok){
+               refetch()
                router.push('/')
           }
      }

@@ -23,7 +23,7 @@ const AllTours = () => {
           const fetchTours = async () => {
                
                try {
-                    const res = await axios.get('http://localhost:3000/dataBase/api/getApi', {
+                    const res = await axios.get('http://localhost:3000/tours/api/getApi', {
                          params: { place: selectedPlace, search: selectedSearch, category: selectCategory, limit, page }
 
                     });

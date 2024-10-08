@@ -44,7 +44,7 @@ const TourDetails = () => {
           }
           
           try {
-               const res = await axios.post("http://localhost:3000/dataBase/api/tourBoking",book)
+               const res = await axios.post("http://localhost:3000/tours/api/tourBoking",book)
                if(res.status === 200){
                     toast.success("Aded to boking succesffy")
                     e.target.reset()
