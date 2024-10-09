@@ -4,21 +4,51 @@ import axios from 'axios';
 import { AlarmClock, Delete, DeleteIcon, Link, Star, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const MyBoking = () => {
      const [Tours,refetch] =useUserBoking()
-     const handleDelete = async(id) =>{
-          try {
-               const res = await axios.delete("http://localhost:3000/tours/api/tourBoking",{
-                    params:{id:id}
-               })
-               if(res.status === 200){
-                    refetch()
+   
+          const handleDelete = async (id) => {
+               try {
+                    Swal.fire({
+                         title: "Are you sure?",
+                         text: "You won't be able to revert this!",
+                         icon: "warning",
+                         showCancelButton: true,
+                         confirmButtonColor: "#3085d6",
+                         cancelButtonColor: "#d33",
+                         confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                         if (result.isConfirmed) {
+                              axios.delete(`http://localhost:3000/tours/api/tourBoking`,{
+                                   params:{id:id}
+                              })
+                                   .then(res => {
+                                        if (res.status === 200) {
+                                             refetch()
+                                             Swal.fire({
+                                                  title: "Deleted!",
+                                                  text: "Your order has been deleted.",
+                                                  icon: "success"
+                                             });
+                                        }
+     
+                                   })
+     
+                         }
+                    });
                }
-          } catch (error) {
-               console.log(error)
+               catch (error) {
+                    console.log(error);
+                    Swal.fire({
+                         icon: "error",
+                         title: "Oops...",
+                         text: "Something went wrong! Please try again.",
+                    });
+               }
           }
-     }
+  
      return (
           <div>
                 <div>
