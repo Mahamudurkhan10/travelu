@@ -12,6 +12,7 @@ import { toast } from 'react-toastify';
 const TourDetails = () => {
      const params = useParams()
     const session = useSession()
+
     const router = useRouter()
      const [tour, setTour] = useState()
      const [number, setNumber] = useState(1)
@@ -28,13 +29,15 @@ const TourDetails = () => {
     
      const handleSubmit = async (e) =>{
           e.preventDefault()
-          setNumber(e.target.num.value)
+          const num = e.target.num.value;
+          const newPrice2 = tour?.price*num
+          setNumber(num)
           const book = {
                image: tour?.image,
                place: tour?.place,
                category:tour?.category,
-               price:newPrice,
-               person: number,
+               price:newPrice2,
+               person: num,
                description: tour?.description,
                email: session.data.user.email,
                userPhoto : session.data.user.image,

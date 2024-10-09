@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
           <AuthProvider>
         <Providers>
        <div className="flex   ">
-       <div className="bg-warning pt-8  h-screen px-12">
+       <div className="bg-warning pt-8 lg:fixed lg:z-10 h-screen px-12">
           <DashboardNavbar></DashboardNavbar>
         </div>
      
-        <div className=" flex-1 p-12">
+        <div className=" flex-1  pl-[420px] p-9">
           {children}
         </div>
        </div>

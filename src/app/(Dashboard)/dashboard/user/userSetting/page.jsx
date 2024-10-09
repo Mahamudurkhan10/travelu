@@ -1,17 +1,31 @@
+'use client'
+import useUser from '@/Components/hooks/useUser';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const userSetting = () => {
+const UserSetting = () => {
+     const [User, refetch] = useUser();
+     console.log(User)
+     const router = useRouter()
      const handleSettings = async (e) =>{
            e.preventDefault()
            const name = e.target.name.value;
-           const photo = e.target.photo.value;
+           const photo = e.target.photo.value || User.photo;
            const password = e.target.password.value;
            const user = {
+               id: User?._id,
                name,photo,password
            }
            console.log(user)
            try {
-               
+               const res = await axios.patch("http://localhost:3000/dataBase/api/user",user)
+               if(res.status === 200){
+                    refetch()
+                    toast.success('settings change succesfully')
+                    router.push('/dashboard/user/userHome')
+               }
            } catch (error) {
                console.log(error)
                
@@ -25,7 +39,7 @@ const userSetting = () => {
                               <h1 className="text-3xl text-center text-warning font-semibold">Settigns</h1>
                               <div className=" flex flex-col items-center">
                                    <div className="w-full flex-1 mt-8">
-                                        <form  action="">
+                                        <form onSubmit={handleSettings} action="">
                                              <div className="mx-auto max-w-xs ">
                                                   <div className=' space-y-6 contact-input'>
                                                        <input type="text" className='border rounded-xl  w-full p-2' name="name" placeholder="Your Name" />
@@ -62,4 +76,4 @@ const userSetting = () => {
      );
 };
 
-export default userSetting;
+export default UserSetting;

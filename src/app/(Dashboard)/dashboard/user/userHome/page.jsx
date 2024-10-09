@@ -12,7 +12,7 @@ const UserHome = () => {
                     <div className="lg:flex  lg:w-1/2  mx-auto border-yellow-100 border-2 mt-5 p-12 gap-5 ">
                          <div className="mb-4 md:mr-6 md:mb-0">
                               <Image
-                                   className="h-56 rounded-lg object-cover animate-pulse md:w-56"
+                                   className="h-56 rounded-lg object-cover   md:w-56"
                                    src={User?.photo}
                                    width={100} 
                                    height={20}

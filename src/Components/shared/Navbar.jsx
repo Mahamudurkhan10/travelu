@@ -1,21 +1,25 @@
 "use client";
-import { Backpack, LogOutIcon, ShoppingBasket } from 'lucide-react';
+import { Backpack, LogOutIcon, ShoppingBasket, Torus } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect } from 'react';
 import useUser from '../hooks/useUser';
 import Image from 'next/image';
+import useUserBoking from '../hooks/useUserBoking';
 
 
 const Navbar = () => {
-     const [User,refetch] = useUser()
      const session = useSession();
+     const [User, refetch] = useUser()
      const router = useRouter()
      const pathName = usePathname();
-    console.log(session)
-     // 
+     const [Tours, refetchTour] = useUserBoking()
     
+     if(User){
+          refetchTour()
+     }
+
 
      const navItems = (
           <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>
@@ -64,10 +68,12 @@ const Navbar = () => {
                          {session.data ? (
                               <div className="dropdown dropdown-bottom dropdown-end">
                                    <div className="flex gap-4 items-center">
-                                        <div>
-                                             <ShoppingBasket size={25} className="relative text-warning mt-2" />
-                                             <span className="absolute top-0 ml-4 font-semibold text-lg">0</span>
-                                        </div>
+                                        {
+                                             User?.role !== 'admin'? <div>
+                                             <Link href={'/dashboard/user/myBokings'}><ShoppingBasket size={25} className="relative text-warning mt-3" /></Link>
+                                             <span className="absolute top-0 ml-4 font-semibold text-lg"> {Tours.length } </span>
+                                        </div>:<></>
+                                        }
                                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                              <div className="rounded-full">
                                                   <Image
