@@ -35,7 +35,7 @@ const UserSetting = () => {
           <div className="">
                <div className="flex justify-center   items-center">
                     <div className="bg-white shadow sm:rounded-lg flex justify-center flex-1 overflow-hidden">
-                         <div className="lg:w-1/2 xl:w-5/12 p-6 mt-24 sm:p-12 h-[700px] ">
+                         <div className="lg:w-1/2 xl:w-5/12 p-6 lg:mt-24 sm:p-12 lg:h-[700px] ">
                               <h1 className="text-3xl text-center text-warning font-semibold">Settigns</h1>
                               <div className=" flex flex-col items-center">
                                    <div className="w-full flex-1 mt-8">

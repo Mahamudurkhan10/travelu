@@ -4,12 +4,12 @@ import { Mail } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
-const UserHome = () => {
+const AdminHome = () => {
      const [User,refetch] = useUser()
      return (
           <div>
                <div className=''>
-                    <div className="lg:flex lg:w-1/2 mx-auto   border-yellow-100 border-2  p-12 gap-5 ">
+                    <div className="lg:flex lg:w-1/2 mx-auto mt-12 border-yellow-100 border-2  p-12 gap-5 ">
                          <div className="mb-4 md:mr-6 md:mb-0">
                               <Image
                                    className="h-56 w-full rounded-lg object-cover  md:w-56"
@@ -30,4 +30,4 @@ const UserHome = () => {
      );
 };
 
-export default UserHome;
+export default AdminHome;
