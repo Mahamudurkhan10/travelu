@@ -1,4 +1,5 @@
 import { AlarmClock, AudioWaveform, Star } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 const foods = [
@@ -19,13 +20,13 @@ const foods = [
     id: 3,
     image: "https://i.ibb.co.com/SRzkLS8/img-07.jpg",
     title: "Best of Canada Tours And Travel",
-    place: 'italy',
+    place: 'Rome',
   },
   {
     id: 4,
     image: "https://i.ibb.co.com/ckppttB/img-08.jpg",
     title: "Best of Canada Tours And Travel",
-    place: 'italy',
+    place: 'France',
   },
   {
      id: 5,
@@ -37,7 +38,7 @@ const foods = [
      id: 6,
      image: "https://i.ibb.co.com/f1RMy5H/img-10.jpg",
      title: "Best of Canada Tours And Travel",
-     place: "canada",
+     place: "London",
    },
 ];
 
@@ -54,7 +55,8 @@ const Trending = () => {
 
       <div className='grid grid-cols-1 mt-12 sm:grid-cols-2 md:grid-cols-3 gap-12'>
         {foods.map((food) => (
-          <div key={food.id}>
+         <Link href={`/tours`} key={food.id}>
+          <div >
             {/* Image Section */}
             <div
               className='relative bg-cover bg-center bg-no-repeat rounded-xl group duration-3000 opacity-90 hover:shadow-lg cursor-pointer'
@@ -101,7 +103,7 @@ const Trending = () => {
               <h1 className='text-xl font-semibold'>{food.title}</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat odio voluptatibus nesciunt suscipit.</p>
             </div>
-          </div>
+          </div></Link>
         ))}
       </div>
     </div>

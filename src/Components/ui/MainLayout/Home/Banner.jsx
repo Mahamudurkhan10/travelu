@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
+import Link from 'next/link';
 
 export default function Banner() {
      return (
@@ -25,7 +26,7 @@ export default function Banner() {
                                    <p className='text-2xl lg:text-4xl font-semibold text-white'> People don’t take trips, trips take People </p>
 
                                    <div className='flex items-center justify-center lg:justify-start py-8'>
-                                        <button
+                                       <Link href={'/tours'}> <button
                                              class="relative flex items-center  px-6 py-3 overflow-hidden font-medium transition-all bg-[#e7a500] rounded-md group"
                                         >
                                              <span
@@ -53,7 +54,7 @@ export default function Banner() {
                                                   Explore Tour
                                              </span >
 
-                                        </button>
+                                        </button></Link>
                                    </div>
                               </div>
 

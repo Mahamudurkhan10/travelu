@@ -1,6 +1,7 @@
 
 import { AudioWaveform, LocateIcon, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 const Destinations = [
      {
@@ -54,7 +55,7 @@ const TopDestinations = () => {
                     }
                </div>
                <div className='max-w-7xl  gap-4    grid grid-cols-1 lg:grid-cols-6 mx-auto pt-12'>
-                    <div className='bg-cover relative group rounded-xl opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl col-span-2 bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co/khk0TSk/img-15.jpg')" }}>
+                    <Link href={'/tours'} className='bg-cover relative group rounded-xl opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl col-span-2 bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co/khk0TSk/img-15.jpg')" }}>
 
                          <div className='absolute rounded-xl  inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-60 transition-all duration-500'></div>
 
@@ -76,9 +77,9 @@ const TopDestinations = () => {
 
                               </h1>
                          </div>
-                    </div>
+                    </Link>
                     <div className='col-span-2  flex flex-col gap-4'>
-                         <div className='bg-cover relative rounded-xl group opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl  bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/T1Wzz87/img-16.jpg')" }}>
+                         <Link href={'/tours'} className='bg-cover relative rounded-xl group opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl  bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/T1Wzz87/img-16.jpg')" }}>
 
                               <div className='absolute inset-0 rounded-xl bg-black bg-opacity-30 group-hover:bg-opacity-60 transition-all duration-500'></div>
 
@@ -100,8 +101,8 @@ const TopDestinations = () => {
 
                                    </h1>
                               </div>
-                         </div>
-                         <div className='bg-cover rounded-xl relative group opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl  bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/BtYKxd9/img-17.jpg')" }}>
+                         </Link>
+                         <Link href={'/tours'} className='bg-cover rounded-xl relative group opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl  bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/BtYKxd9/img-17.jpg')" }}>
 
                               <div className='absolute rounded-xl inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-60 transition-all duration-500'></div>
 
@@ -123,10 +124,10 @@ const TopDestinations = () => {
 
                                    </h1>
                               </div>
-                         </div>
+                         </Link>
 
                     </div>
-                    <div className='bg-cover rounded-xl relative group opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl col-span-2 bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/rwmXrZJ/img-18.jpg')" }}>
+                    <Link href={'/tours'} className='bg-cover rounded-xl relative group opacity-90 hover:shadow-black cursor-pointer hover:shadow-2xl col-span-2 bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/rwmXrZJ/img-18.jpg')" }}>
 
                          <div className='absolute rounded-xl inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-60 transition-all duration-500'></div>
 
@@ -148,7 +149,7 @@ const TopDestinations = () => {
 
                               </h1>
                          </div>
-                    </div>
+                    </Link>
 
 
 

@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { AlarmClock, AudioWaveform, Star } from 'lucide-react';
 import { useRef ,useState,useEffect} from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 
 const PopularTour = () => {
      const swiperRef = useRef()
@@ -60,7 +61,7 @@ const PopularTour = () => {
                                         >
                                              {tours.map((food) => (
                                                   <SwiperSlide key={food._id}>
-                                                       <div className=''>
+                                                    <Link href={'/tours'}>   <div className=''>
                                                             <Image width={500} className='rounded-xl' height={500} src={food.image} alt='image'></Image>
                                                             <div className='bg-base-100 rounded-b-xl p-4 space-y-3 ' >
                                                               <h1 className='text-xl font-semibold'> {food.title} </h1>
@@ -75,7 +76,7 @@ const PopularTour = () => {
                                                                   <h1 className='text-xl font-bold text-orange-500'> $ {food.price} </h1>
                                                                 </div>
                                                             </div>
-                                                       </div>
+                                                       </div></Link>
                                                   </SwiperSlide>
                                              ))}
                                         </Swiper>

@@ -18,9 +18,9 @@ const DashboardNavbar = () => {
                          <div className="divider" ></div>
                          <div className="flex flex-col gap-4">
                               <Link href="/dashboard/admin/adminHome" className="btn  text-warning  font-bold pr-10"> <User2Icon></User2Icon> Admin Home </Link>
-                              <Link href="/dashboard/user/myBokings" className="btn  text-warning  font-bold pl-16 "> <Book></Book> ALL Users </Link>
-                              <Link href="/dashboard/user/myBokings" className="btn  text-warning  font-bold pr-12 "> <Book></Book> ALL Bokings  </Link>
-                              <Link href="/dashboard/user/myBokings" className="btn  text-warning  font-bold pr-16"> <Book></Book> ALL Tours  </Link>
+                              <Link href="/dashboard/admin/allUsers" className="btn  text-warning  font-bold pr-16 "> <Book></Book> ALL Users </Link>
+                              <Link href="/dashboard/admin/allBokings" className="btn  text-warning  font-bold pr-12 "> <Book></Book> ALL Bokings  </Link>
+                              <Link href="/dashboard/admin/allTours" className="btn  text-warning  font-bold pr-16"> <Book></Book> ALL Tours  </Link>
                             
 
                          </div>
