@@ -5,7 +5,7 @@ const AskQuestion = () => {
      return (
           <div className='max-w-7xl mx-auto'>
                <section className=" dark:text-gray-800">
-                    <div className="">
+                    <div >
 
                          <h2 className="mb-5 text-xl font-semibold leading-none text-start sm:text-5xl">Need Help?</h2>
                          <p>Lorem ipsum dolor sit amet consectetur adipisicing. Lorem, ipsum dolor.</p>
@@ -33,14 +33,14 @@ const AskQuestion = () => {
                               </div>
                               <div className="collapse collapse-arrow hover:text-warning ">
                                    <input type="checkbox" />
-                                   <div className="collapse-title flex justify-between text-xl font-medium">What if I don't eat them all at once?  </div>
+                                   <div className="collapse-title flex justify-between text-xl font-medium">What if I don not eat them all at once?  </div>
                                    <div className="collapse-content">
                                         <p>hello</p>
                                    </div>
                               </div>
                               <div className="collapse  collapse-arrow  hover:text-warning ">
                                    <input type="checkbox" />
-                                   <div className="collapse-title flex justify-between text-xl font-medium">What's in the food? Is it organic? Is it gluten free?   </div>
+                                   <div className="collapse-title flex justify-between text-xl font-medium">Whats in the food? Is it organic? Is it gluten free?   </div>
                                    <div className="collapse-content">
                                         <p>hello</p>
                                    </div>

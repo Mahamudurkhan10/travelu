@@ -38,7 +38,7 @@ export default function Gallery() {
                <section className='mt-12 grid gap-5 grid-cols-1 lg:grid-cols-3'>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>01</span> Luxury Hotels </h1>
-                         <p className='py-3 text-[15px]'>Experience the epitome of luxury with our handpicked hotels, offering world-class comfort, stunning locations, and personalized services. Enjoy elegant suites, gourmet dining, and rejuvenating spa treatments. Whether you're seeking a serene getaway or a vibrant city escape, our luxury hotels ensure an unforgettable travel experience tailored just for you.  </p>
+                         <p className='py-3 text-[15px]'>Experience the epitome of luxury with our handpicked hotels, offering world-class comfort, stunning locations, and personalized services. Enjoy elegant suites, gourmet dining, and rejuvenating spa treatments. Whether you are seeking a serene getaway or a vibrant city escape, our luxury hotels ensure an unforgettable travel experience tailored just for you.  </p>
                     </div>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>02</span> Tourist Guide </h1>
