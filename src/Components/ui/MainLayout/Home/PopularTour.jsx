@@ -19,6 +19,7 @@ const PopularTour = () => {
     useEffect(()=>{
           const fetchTours = async()=>{
                const res = await axios("http://localhost:3000/HomeApi/PopularTour")
+              
                setTours(res.data)
           }
           fetchTours()

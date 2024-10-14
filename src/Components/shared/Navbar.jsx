@@ -1,4 +1,5 @@
 "use client";
+
 import { Backpack, LogOutIcon, ShoppingBasket, Torus } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';

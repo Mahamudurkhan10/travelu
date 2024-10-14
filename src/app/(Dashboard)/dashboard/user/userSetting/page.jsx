@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 
 const UserSetting = () => {
      const [User, refetch] = useUser();
-     console.log(User)
+     
      const router = useRouter()
      const handleSettings = async (e) =>{
            e.preventDefault()
@@ -18,7 +18,7 @@ const UserSetting = () => {
                id: User?._id,
                name,photo,password
            }
-           console.log(user)
+        
            try {
                const res = await axios.patch("http://localhost:3000/dataBase/api/user",user)
                if(res.status === 200){
@@ -27,7 +27,7 @@ const UserSetting = () => {
                     router.push('/dashboard/user/userHome')
                }
            } catch (error) {
-               console.log(error)
+             
                
            }
      }

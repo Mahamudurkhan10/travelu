@@ -40,7 +40,7 @@ const MyBoking = () => {
                     });
                }   
                catch (error) {
-                    console.log(error);
+                    
                     Swal.fire({
                          icon: "error",
                          title: "Oops...",

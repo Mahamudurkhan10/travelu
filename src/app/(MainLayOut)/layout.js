@@ -1,6 +1,8 @@
 
-import Navbar from "@/Components/shared/Navbar";
 
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('./../../Components/shared/Navbar'), { ssr: false });
 import { Footer } from "@/Components/shared/Footer";
 
 
