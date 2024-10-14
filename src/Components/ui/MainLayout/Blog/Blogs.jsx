@@ -12,7 +12,7 @@ const Blogs = () => {
      useEffect(() => {
           const fetchData = async () => {
                try {
-                    const res = await axios.get("http://localhost:3000/blogs/api")
+                    const res = await axios.get("https://travelu-beta.vercel.app/blogs/api")
                     setBlogs(res.data.resp);
                } catch (error) {
                     console.log(error);

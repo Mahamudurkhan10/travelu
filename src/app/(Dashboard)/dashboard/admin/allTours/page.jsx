@@ -24,7 +24,7 @@ const ALLTours = () => {
           const fetchTours = async () => {
 
                try {
-                    const res = await axios.get('http://localhost:3000/tours/api/getApi', {
+                    const res = await axios.get('https://travelu-beta.vercel.app/tours/api/getApi', {
                          params: { place: selectedPlace, search: selectedSearch, limit, page }
 
                     });
@@ -75,7 +75,7 @@ const ALLTours = () => {
                     confirmButtonText: "Yes, delete it!"
                }).then((result) => {
                     if (result.isConfirmed) {
-                         axios.delete(`http://localhost:3000/tours/api/getApi`,{
+                         axios.delete(`https://travelu-beta.vercel.app/tours/api/getApi`,{
                               params:{id:id}
                          })
                               .then(res => {

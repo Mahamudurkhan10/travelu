@@ -18,7 +18,7 @@ const SignUp = () => {
           const User = {email,name,password,photo,role:"user"}
       
           try {
-               const res = await axios.post("http://localhost:3000/signUp/api",User)    
+               const res = await axios.post("https://travelu-beta.vercel.app/signUp/api",User)    
                
                if(res.status === 200){
                     router.push('/login')

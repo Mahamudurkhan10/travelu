@@ -23,7 +23,7 @@ const AllTours = () => {
           const fetchTours = async () => {
                
                try {
-                    const res = await axios.get('http://localhost:3000/tours/api/getApi', {
+                    const res = await axios.get('https://travelu-beta.vercel.app/tours/api/getApi', {
                          params: { place: selectedPlace, search: selectedSearch, category: selectCategory, limit, page }
 
                     });

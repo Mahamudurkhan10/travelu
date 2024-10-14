@@ -9,7 +9,7 @@ const useUsers = () => {
     const {data: Users =[],refetch, ispending:loading} = useQuery({
       queryKey:["users",],
       queryFn: async ()=>{
-          const res = await axios.get(`http://localhost:3000/dataBase/api/users`)
+          const res = await axios.get(`https://travelu-beta.vercel.app/dataBase/api/users`)
           console.log(res.data)
           return res.data;
       }

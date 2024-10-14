@@ -20,7 +20,7 @@ const ALLUsers = () => {
                     confirmButtonText: "Yes, delete it!"
                }).then((result) => {
                     if (result.isConfirmed) {
-                         axios.delete(`http://localhost:3000/dataBase/api/users`,{
+                         axios.delete(`https://travelu-beta.vercel.app/dataBase/api/users`,{
                               params:{id:id}
                          })
                               .then(res => {

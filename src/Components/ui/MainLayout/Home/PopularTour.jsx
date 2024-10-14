@@ -12,19 +12,21 @@ import { AlarmClock, AudioWaveform, Star } from 'lucide-react';
 import { useRef ,useState,useEffect} from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const PopularTour = () => {
      const swiperRef = useRef()
     const [tours,setTours] = useState()
+    
     useEffect(()=>{
           const fetchTours = async()=>{
-               const res = await axios("http://localhost:3000/HomeApi/PopularTour")
+               const res = await axios("https://travelu-beta.vercel.app/HomeApi/PopularTour")
               
                setTours(res.data)
           }
           fetchTours()
     },[])
-      
+ 
      return (
           <div>
                <div className='bg-cover relative mt-5 bg-fixed bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/bP9jLhD/bgparallax-01-1.jpg')"}}>
@@ -33,7 +35,7 @@ const PopularTour = () => {
                          <div className='max-w-7xl pt-20   mx-auto '>
                                <div className='flex  justify-between'>
                                    <h1 className='flex items-center gap-4  text-white  text-3xl font-bold'> Popular Tour  <AudioWaveform className='font-bold' size={30} strokeWidth={1.5} /> </h1>
-                                   <h1 className='text-white text-xl font-bold border-b-4 border-warning '> ALL Tours </h1>
+                                  <Link href={'/tours'}><button className='text-white  text-xl font-bold btn btn-warning btn-outline border-b-4 '> ALL Tours </button></Link>
                                </div>
                               <div className=' pt-7 mx-auto '>
                                    {tours?.length > 0 && (
@@ -62,7 +64,7 @@ const PopularTour = () => {
                                         >
                                              {tours.map((food) => (
                                                   <SwiperSlide key={food._id}>
-                                                    <Link href={'/tours'}>   <div className=''>
+                                                    <div>   <div className=''>
                                                             <Image width={500} className='rounded-xl' height={500} src={food.image} alt='image'></Image>
                                                             <div className='bg-base-100 rounded-b-xl p-4 space-y-3 ' >
                                                               <h1 className='text-xl font-semibold'> {food.title} </h1>
@@ -77,7 +79,7 @@ const PopularTour = () => {
                                                                   <h1 className='text-xl font-bold text-orange-500'> $ {food.price} </h1>
                                                                 </div>
                                                             </div>
-                                                       </div></Link>
+                                                       </div></div>
                                                   </SwiperSlide>
                                              ))}
                                         </Swiper>

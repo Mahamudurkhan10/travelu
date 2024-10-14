@@ -1,16 +1,9 @@
-
-
-import dynamic from 'next/dynamic';
-
-const Navbar = dynamic(() => import('./../../Components/shared/Navbar'), { ssr: false });
 import { Footer } from "@/Components/shared/Footer";
-
-
-
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Providers from "@/services/Provider";
 import AuthProvider from "@/services/AuthProvider";
+import Navbar from "@/Components/shared/Navbar";
 
 export const metadata = {
   title: "Travelu",
@@ -23,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="light" >
 
       <body
-        className={`  antialiased  `}
+       
       >
           <AuthProvider>
         <Providers>

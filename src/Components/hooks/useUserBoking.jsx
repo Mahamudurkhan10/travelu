@@ -9,7 +9,7 @@ const useUserBoking = () => {
     const {data: Tours =[],refetch, ispending:loading} = useQuery({
       queryKey:["bokings",session?.data?.user?.email],
       queryFn: async ()=>{
-          const res = await axios.get(`http://localhost:3000/tours/api/tourBoking`,{
+          const res = await axios.get(`https://travelu-beta.vercel.app/tours/api/tourBoking`,{
                params:{email:session?.data?.user?.email}
           })
           console.log(res.data)

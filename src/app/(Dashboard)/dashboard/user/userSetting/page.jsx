@@ -20,7 +20,7 @@ const UserSetting = () => {
            }
         
            try {
-               const res = await axios.patch("http://localhost:3000/dataBase/api/user",user)
+               const res = await axios.patch("https://travelu-beta.vercel.app/dataBase/api/user",user)
                if(res.status === 200){
                     refetch()
                     toast.success('settings change succesfully')

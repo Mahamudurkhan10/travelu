@@ -6,7 +6,7 @@ const useBokings = () => {
      const {data: Bokings =[],refetch, ispending:loading} = useQuery({
           queryKey:["bokings",],
           queryFn: async ()=>{
-              const res = await axios.get(`http://localhost:3000/dataBase/api/tourBokings`)
+              const res = await axios.get(`https://travelu-beta.vercel.app/dataBase/api/tourBokings`)
               console.log(res.data)
               return res.data;
           }

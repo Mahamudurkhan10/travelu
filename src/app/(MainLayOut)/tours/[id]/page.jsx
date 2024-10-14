@@ -20,7 +20,7 @@ const TourDetails = () => {
      const newPrice = tour?.price*number
      useEffect(() => {
           const fetchBlog = async () => {
-               const res = await axios.get(`http://localhost:3000/tours/api/tourDetails/${params.id}`)
+               const res = await axios.get(`https://travelu-beta.vercel.app/tours/api/tourDetails/${params.id}`)
 
                setTour(res.data)
           }
@@ -47,7 +47,7 @@ const TourDetails = () => {
           }
           
           try {
-               const res = await axios.post("http://localhost:3000/tours/api/tourBoking",book)
+               const res = await axios.post("https://travelu-beta.vercel.app/tours/api/tourBoking",book)
                if(res.status === 200){
                     toast.success("Aded to boking succesffy")
                     e.target.reset()

@@ -11,7 +11,7 @@ const BlogDetails = () => {
     
      useEffect(()=>{
           const fetchBlog = async()=>{
-               const res = await axios.get(`http://localhost:3000/blogs/blog/${params.id}`)
+               const res = await axios.get(`https://travelu-beta.vercel.app/blogs/blog/${params.id}`)
               
                setBlog(res.data)
           }

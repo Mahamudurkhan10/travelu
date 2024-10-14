@@ -20,7 +20,7 @@ const ALLBokings = () => {
                     confirmButtonText: "Yes, delete it!"
                }).then((result) => {
                     if (result.isConfirmed) {
-                         axios.delete(`http://localhost:3000/tours/api/tourBoking`,{
+                         axios.delete(`https://travelu-beta.vercel.app/tours/api/tourBoking`,{
                               params:{id:id}
                          })
                               .then(res => {
