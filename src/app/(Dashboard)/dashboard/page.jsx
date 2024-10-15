@@ -9,6 +9,10 @@ const Dashboard = () => {
    if(User?.role === "user"){
      router.push('/dashboard/user/userHome')
    }
+   else if(User?.role ==="admin"){
+    router.push('/dashboard/admin/adminHome')
+   }
+  
      return (
           <div>
              

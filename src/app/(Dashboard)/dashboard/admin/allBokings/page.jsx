@@ -52,10 +52,10 @@ const ALLBokings = () => {
           <div>
               <h1 className="text-4xl font-semibold text-center"> ALL Bokings </h1>
           </div>
-         <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-3 pt-7 grid-cols-1">
+         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-3 pt-7 grid-cols-1">
               {
                    Bokings.map(tour => (  <div key={tour._id}>
-                        <div className=''>
+                        <div className='border rounded-xl '>
                              <Image width={500} className='rounded-xl' height={500} src={tour.image} alt='image'></Image>
                              <div className='bg-base-100 rounded-b-xl p-4 space-y-3 '>
                                   <div className="flex justify-between">
@@ -68,7 +68,7 @@ const ALLBokings = () => {
                                        <h1 className='flex items-center gap-2'><AlarmClock /> 7 Days </h1>
                                         <h1> Person {tour.person} </h1>
                                   </div>
-                                  <div className='flex justify-between'>
+                                  <div className='flex lg:flex-col md:flex-col justify-between'>
                                        <h1 className='flex items-center gap-1'>
                                             <Star className='text-yellow-500' size={20} />
                                             <Star className='text-yellow-500' size={20} />

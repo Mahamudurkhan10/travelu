@@ -65,8 +65,8 @@ const TourDetails = () => {
      }
      return (
           <div>
-               <div className=" max-w-7xl mx-auto mt-12 mb-24 ">
-                    <div className="flex flex-col lg:flex-row gap-5 ">
+               <div className=" max-w-7xl mx-auto px-0 lg:px-4 md:px-4 lg:mt-12 mb-24 ">
+                    <div className="flex flex-col lg:flex-row md:flex-row gap-5 ">
 
                          <Image src={tour?.image} width={600} height={500} alt="main image" className="rounded-xl hover:shadow-2xl"></Image>
                          <div className=" p-7 border lg:w-2/5 hover:shadow-2xl shadow-lg rounded-xl">

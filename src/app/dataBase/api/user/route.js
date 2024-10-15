@@ -25,11 +25,21 @@ export const PATCH = async (request) => {
      try {
           const id = body.id
           const password = body.password
+          const newPassword = bcrypt.hashSync(password,14)
           const db = await ConnectDB()
           const filter = { _id: new ObjectId(id) }
           const user = await db.collection("users").findOne(filter)
-          if (!user) {
-               return new NextResponse(JSON.stringify({ message: "User not found." }), { status: 404 });
+          if (!user.password) {
+               const options = { upsert: true }
+               const updateUserData = {
+                    $set: {
+                         name: body.name,
+                         photo: body.photo,
+                         password: newPassword
+                    }
+               }
+               const result = await db.collection("users").updateOne(filter, updateUserData, options)
+               return new NextResponse(JSON.stringify(result), { status: 200 })
           }
           const isPasswordMatch = await bcrypt.compare(password, user.password)
           if (!isPasswordMatch) {

@@ -126,8 +126,8 @@ const ALLTours = () => {
                <div>
 
                </div>
-               <div className="grid  lg:grid-cols-5 items-center gap-12 mt-3">
-                    <div className="p-4 lg:col-span-2 lg:flex grid grid-cols-3 gap-3 ">
+               <div className="grid  lg:grid-cols-3 xl:grid-cols-5  xl:items-center lg:gap-12 gap-2 mt-3">
+                    <div className="p-4 lg:col-span-1 xl:col-span-2  xl:flex grid grid-cols-2 lg:grid-cols-3 gap-3 ">
                          {["", "Rome", "Italy", "France", "Venice", "Milan", "London"].map((place) => (
                               <button
                                    key={place}
@@ -139,7 +139,10 @@ const ALLTours = () => {
                               </button>
                          ))}
                     </div>
-                    <div className="lg:col-span-1">
+                    <div className='xl:col-span-1 xl:block lg:hidden'>
+
+                    </div>
+                    <div className="lg:col-span-1 xl:col-span-1  lg:pt-4 pt-0  ">
                          <form className="relative border  border-warning  rounded-xl text-gray-600">
                               <input
                                    type="search"
@@ -161,18 +164,16 @@ const ALLTours = () => {
                               </div>
                          </form>
                     </div>
-                    <div className="col-span-1">
-
-                    </div>
-                    <div className="lg:col-span-1  ">
+                    
+                    <div className="lg:col-span-1 xl:col-span-1  lg:pt-4 pt-0 ">
                          <div className='border border-yellow-500'>
                               <Link href={'/'} className='flex items-center gap-1 text-warning font-semibold justify-center text-xl'> <Plus></Plus> Create Tour </Link>
                          </div>
                     </div>
                </div>
-               <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 p-5 gap-5">
+               <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 pt-3 lg:pt-0  lg:gap-3 gap-5">
                     {tours?.map((tour) => (
-                         <div key={tour._id}>
+                         <div key={tour._id} className='border rounded-xl'>
                               <div className=''>
                                    <Image width={500} className='rounded-xl' height={500} src={tour.image} alt='image'></Image>
                                    <div className='bg-base-100 rounded-b-xl p-4 space-y-3 '>
@@ -186,14 +187,16 @@ const ALLTours = () => {
                                              <h1 className='flex items-center gap-2'><AlarmClock /> 7 Days </h1>
                                              <h1>From </h1>
                                         </div>
-                                        <div className='flex justify-between'>
-                                             <h1 className='flex items-center gap-1'>
-                                                  <Star className='text-yellow-500' size={20} />
-                                                  <Star className='text-yellow-500' size={20} />
-                                                  <Star className='text-yellow-500' size={20} />
-                                                  <Star className='text-yellow-500' size={20} />
-                                                  <Star className='text-yellow-700 mr-1' size={20} /> ( {tour.reviews} reviews)
+                                        <div className='flex md:flex-col  justify-between'>
+                                             <h1 className='flex md:text-[13px] items-center gap-1'>
+                                                  <Star className='text-yellow-500'  />
+                                                  <Star className='text-yellow-500'  />
+                                                  <Star className='text-yellow-500'  />
+                                                  <Star className='text-yellow-500'  />
+                                                  <Star className='text-yellow-700 mr-1 '  /> 
+                                                  <span className='font-semibold'>( {tour.reviews} reviews)</span>
                                              </h1>
+                                             
                                              <h1 className='text-xl font-bold text-orange-500'> $ {tour.price} </h1>
 
                                         </div>

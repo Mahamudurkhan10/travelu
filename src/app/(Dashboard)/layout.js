@@ -20,12 +20,12 @@ export default function RootLayout({ children }) {
       >
           <AuthProvider>
         <Providers>
-       <div className="flex flex-col lg:flex-row  ">
-       <div className="bg-warning pt-8 lg:fixed lg:z-10 h-screen px-12">
+       <div className="flex flex-col lg:flex-row md:flex-row  ">
+       <div className="bg-warning pt-8 lg:fixed md:fixed lg:z-10 lg:h-screen md:h-screen p-3 xl:px-12 lg:px-4">
           <DashboardNavbar></DashboardNavbar>
         </div>
      
-        <div className=" flex-1  lg:pl-[420px] p-9">
+        <div className=" flex-1  xl:pl-[420px] lg:pl-[300px] md:pl-[300px] xl:p-9 ">
           {children}
         </div>
        </div>

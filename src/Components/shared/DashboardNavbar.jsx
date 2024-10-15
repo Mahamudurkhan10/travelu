@@ -13,14 +13,14 @@ const DashboardNavbar = () => {
      return (
           <div className=" ">
                {
-                    User?.role === "admin" ? <div className="space-y-4">
-                         <h1 className="text-3xl text-center text-white font-semibold flex items-center gap-2 "> <Image src={User?.photo || "https://i.ibb.co.com/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg"} width={40} height={20} alt="user photo" className=" rounded-full " ></Image>  Admin Dashboard  </h1>
+                    User?.role === "admin" ? <div className="lg:space-y-4">
+                         <h1 className="xl:text-3xl text-2xl lg:text-2xl text-center text-white font-semibold flex items-center gap-2 "> <Image src={User?.photo || "https://i.ibb.co.com/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg"} width={40} height={20} alt="user photo" className=" rounded-full " ></Image>  Admin Dashboard  </h1>
                          <div className="divider" ></div>
                          <div className="flex flex-col gap-4">
-                              <Link href="/dashboard/admin/adminHome" className="btn  text-warning  font-bold pr-10"> <User2Icon></User2Icon> Admin Home </Link>
-                              <Link href="/dashboard/admin/allUsers" className="btn  text-warning  font-bold pr-16 "> <Book></Book> ALL Users </Link>
-                              <Link href="/dashboard/admin/allBokings" className="btn  text-warning  font-bold pr-12 "> <Book></Book> ALL Bokings  </Link>
-                              <Link href="/dashboard/admin/allTours" className="btn  text-warning  font-bold pr-16"> <Book></Book> ALL Tours  </Link>
+                              <Link href="/dashboard/admin/adminHome" className="btn  text-warning  font-bold xl:pr-10"> <User2Icon></User2Icon> Admin Home </Link>
+                              <Link href="/dashboard/admin/allUsers" className="btn  text-warning  font-bold xl:pr-16 "> <Book></Book> ALL Users </Link>
+                              <Link href="/dashboard/admin/allBokings" className="btn  text-warning  font-bold xl:pr-12 "> <Book></Book> ALL Bokings  </Link>
+                              <Link href="/dashboard/admin/allTours" className="btn  text-warning  font-bold xl:pr-16"> <Book></Book> ALL Tours  </Link>
                             
 
                          </div>
@@ -28,7 +28,7 @@ const DashboardNavbar = () => {
                          <h1 className="text-3xl text-center text-white font-semibold flex items-center gap-2 "> <Image src={User?.photo || "https://i.ibb.co.com/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg"} width={40} height={20} alt="user photo" className=" rounded-full " ></Image>  User Dashboard  </h1>
                          <div className="divider" ></div>
                          <div className="flex flex-col gap-4">
-                              <Link href="/dashboard/user/userHome" className="btn  text-warning  font-bold"> <UserCheckIcon></UserCheckIcon> User Home </Link>
+                              <Link href="/dashboard/user/userHome" className="btn  text-warning  font-bold"> <User2Icon></User2Icon> User Home </Link>
                               <Link href="/dashboard/user/myBokings" className="btn  text-warning  font-bold"> <Book></Book> My Bokings </Link>
                               <Link href="/dashboard/user/userSetting" className=" btn text-warning text-lg font-bold"> <Settings></Settings>  Settings </Link>
 
@@ -38,7 +38,7 @@ const DashboardNavbar = () => {
 
 
 
-               <ul className="w-full pt-12 mt-12" >
+               <ul className="w-full lg:pt-12 lg:mt-12" >
                     <div className='divider'></div>
                     <Link href="/" className="  btn  w-full "><li>Go Home</li></Link>
                </ul>

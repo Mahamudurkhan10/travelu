@@ -48,10 +48,10 @@ const ALLUsers = () => {
           }
      }
      return (
-          <div className='lg:pl-12'>
-               <div className='grid md:grid-cols-3 gap-4  lg:grid-cols-4 grid-cols-1'>
+          <div className='2xl:pl-12'>
+               <div className='grid md:grid-cols-1  gap-4  lg:grid-cols-2 2xl:grid-cols-4 xl:grid-cols-3 grid-cols-1'>
                     {
-                         Users?.map(User => <div key={User._id} className=' border-yellow-100 border-2  p-2'>
+                         Users?.map(User => <div key={User._id} className=' border-yellow-100 border-2  p-3 '>
                               <div className="flex flex-col items-center   mx-auto mt-12  gap-5 ">
                                    <div className="mb-4 pt-3 md:mr-6 md:mb-0">
                                         <Image
@@ -63,9 +63,9 @@ const ALLUsers = () => {
                                         />
                                    </div>
                                    <div>
-                                        <h1 className="text-3xl font-bold text-warning text-center pt-3"> {User?.name}</h1>
-                                        <h1 className="text-xl flex items-center justify-center py-3 text-warning gap-2"> <Mail></Mail> {User?.email}</h1>
-                                        <h1 className="text-4xl font-semibold text-center pb-3 text-[#703bf7]"> {User?.role} </h1>
+                                        <h1 className="lg:text-3xl font-bold text-warning text-center pt-3"> {User?.name}</h1>
+                                        <h1 className="lg:text-lg  flex items-center justify-center py-3 p-4 text-warning gap-2"> <Mail></Mail> {User?.email}</h1>
+                                        <h1 className="lg:text-4xl font-semibold text-center pb-3 text-[#703bf7]"> {User?.role} </h1>
                                    </div>
                                  
                               </div>

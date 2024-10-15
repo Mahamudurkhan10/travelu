@@ -68,7 +68,7 @@ const Navbar = () => {
 
                          {session.data ? (
                               <div className="dropdown dropdown-bottom dropdown-end">
-                                   <div className="flex gap-4 items-center">
+                                   <div className="flex  gap-1 lg:gap-4 items-center">
                                         {
                                              User?.role !== 'admin'? <div>
                                              <Link href={'/dashboard/user/myBokings'}><ShoppingBasket size={25} className="relative text-warning mt-3" /></Link>
