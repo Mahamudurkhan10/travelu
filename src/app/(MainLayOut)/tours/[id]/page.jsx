@@ -66,21 +66,21 @@ const TourDetails = () => {
      return (
           <div>
                <div className=" max-w-7xl mx-auto mt-12 mb-24 ">
-                    <div className="flex  gap-5 ">
+                    <div className="flex flex-col lg:flex-row gap-5 ">
 
                          <Image src={tour?.image} width={600} height={500} alt="main image" className="rounded-xl hover:shadow-2xl"></Image>
-                         <div className=" p-7 border w-2/5 hover:shadow-2xl shadow-lg rounded-xl">
+                         <div className=" p-7 border lg:w-2/5 hover:shadow-2xl shadow-lg rounded-xl">
                            
                               <div className="flex text-xl font-semibold mb-2 justify-between" >
                                    <h1 className=""> {tour?.place} </h1>
                                    <h1 className=""> {tour?.category} </h1>
                               </div>
-                              <h1 className="text-3xl font-semibold text-center"> {tour?.title} </h1>
+                              <h1 className="lg:text-3xl text-2xl font-semibold text-center"> {tour?.title} </h1>
                               <h1 className='flex justify-center p-3 items-center gap-1 '> <Star className='text-yellow-500 ' size={20} /> <Star className='text-yellow-500 ' size={20} /><Star className='text-yellow-500 ' size={20} /><Star className='text-yellow-500 ' size={20} /><Star className='text-yellow-700 mr-1 ' size={20} /> ( {tour?.reviews} reviews) </h1>
                               <h1 className="text-2xl font-bold text-warning text-center">${newPrice} <span className="text-lg font-semibold text-gray-400">/ per person</span> </h1>
                               <div className="py-3 space-y-5 ">
                                    <p className="font-semibold text-center ">{tour?.description}</p>
-                                   <form onSubmit={handleSubmit} className="flex justify-between ">
+                                   <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row gap-3 justify-between ">
                                          <div>
                                              <input    name="num" type="number" className="border py-2 rounded-xl border-warning p-1" required placeholder="Numbar of person" />
                                          </div>

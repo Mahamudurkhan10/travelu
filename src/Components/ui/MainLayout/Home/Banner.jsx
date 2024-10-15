@@ -20,10 +20,10 @@ export default function Banner() {
 
                     <SwiperSlide className='bg-no-repeat bg-cover bg-center ' style={{ backgroundImage: "url('https://i.ibb.co.com/Kxw5T24/pexels-andreimike-1271619.jpg')" }}>
 
-                         <div className=' max-w-7xl  text-center lg:text-start mx-auto  h-[700px]'>
-                              <div className='pt-48'>
-                                   <h1 className='text-4xl lg:text-8xl font-semibold text-white'>Experience the Wonder </h1>
-                                   <p className='text-2xl lg:text-4xl font-semibold text-white'> People don’t take trips, trips take People </p>
+                         <div className=' lg:max-w-7xl   text-center lg:text-start mx-auto h-[500px]  lg:h-[700px]'>
+                              <div className='lg:pt-48 pt-24 lg:px-4 px-0'>
+                                   <h1 className='text-4xl lg:text-8xl md:text-6xl font-semibold text-white'>Experience the Wonder </h1>
+                                   <p className='text-xl lg:text-4xl md:text-3xl font-semibold text-white'> People don’t take trips, trips take People </p>
 
                                    <div className='flex items-center justify-center lg:justify-start py-8'>
                                        <Link href={'/tours'}> <button
@@ -62,10 +62,10 @@ export default function Banner() {
                     </SwiperSlide>
                     <SwiperSlide className='bg-no-repeat bg-cover bg-center ' style={{ backgroundImage: "url('https://i.ibb.co.com/kJz96qP/bgparallax-01.jpg')" }}>
 
-                         <div className=' max-w-7xl text-center lg:text-start  mx-auto  h-[700px]'>
-                              <div className='pt-48'>
-                                   <h1 className='lg:text-8xl text-4xl font-semibold text-white'>Experience the Wonder </h1>
-                                   <p className=' text-2xl lg:text-4xl font-semibold text-white'> People don’t take trips, trips take People </p>
+                         <div className='lg:max-w-7xl   text-center lg:text-start mx-auto h-[500px]  lg:h-[700px]'>
+                              <div className='lg:pt-48 pt-24 lg:px-4 px-0'>
+                                   <h1 className='lg:text-8xl text-4xl md:text-6xl  font-semibold text-white'>Experience the Wonder </h1>
+                                   <p className=' text-2xl lg:text-4xl md:text-3xl font-semibold text-white'> People don’t take trips, trips take People </p>
 
                                    <div className='flex items-center justify-center lg:justify-start py-8'>
                                         <button
@@ -105,10 +105,10 @@ export default function Banner() {
                     </SwiperSlide>
                     <SwiperSlide className='bg-no-repeat bg-cover bg-center opacity-95 ' style={{ backgroundImage: "url('https://i.ibb.co.com/1McgLWP/rest-sunshine-atoll-bungalow-holiday.jpg')" }}>
 
-                         <div className=' max-w-7xl text-center lg:text-start  mx-auto  h-[700px]'>
-                              <div className='pt-48'>
-                                   <h1 className='lg:text-8xl text-4xl font-semibold text-white'>Experience the Wonder </h1>
-                                   <p className='lg:text-4xl text-2xl font-semibold text-white'> People don’t take trips, trips take People </p>
+                         <div className='lg:max-w-7xl   text-center lg:text-start mx-auto h-[500px]  lg:h-[700px]'>
+                              <div className='lg:pt-48 pt-24 lg:px-4 px-0'>
+                                   <h1 className='lg:text-8xl text-4xl md:text-6xl  font-semibold text-white'>Experience the Wonder </h1>
+                                   <p className='lg:text-4xl text-2xl md:text-3xl font-semibold text-white'> People don’t take trips, trips take People </p>
 
                                    <div className='flex items-center justify-center lg:justify-start py-8'>
                                         <button

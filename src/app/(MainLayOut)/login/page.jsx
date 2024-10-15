@@ -21,9 +21,9 @@ const Login = () => {
                password,
                redirect:false
           });
-          console.log(resp)
+          // console.log(resp)
           if(resp.ok){
-              
+              e.target.reset()
                router.push('/')
           }
      }

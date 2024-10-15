@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ContactSection() {
     return (
-        <section className='max-w-7xl mx-auto mt-12 mb-12  '>
+        <section className='max-w-7xl px-0 lg:px-4 mx-auto mt-12 mb-12  '>
             <div className='grid lg:grid-cols-3 gap-3'>
             
                 <div className='flex hover:shadow-2xl items-center justify-center flex-col p-5 space-y-3 border'>

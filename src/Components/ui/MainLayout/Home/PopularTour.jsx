@@ -32,7 +32,7 @@ const PopularTour = () => {
                <div className='bg-cover relative mt-5 bg-fixed bg-center bg-no-repeat' style={{ backgroundImage: "url('https://i.ibb.co.com/bP9jLhD/bgparallax-01-1.jpg')"}}>
                <div className='absolute rounded-xl  inset-0 bg-[#191919] bg-opacity-10 '></div>
                     <div className='h-[800px] '>
-                         <div className='max-w-7xl pt-20   mx-auto '>
+                         <div className='lg:max-w-7xl pt-20 px-0 lg:px-4   mx-auto '>
                                <div className='flex  justify-between'>
                                    <h1 className='flex items-center gap-4  text-white  text-3xl font-bold'> Popular Tour  <AudioWaveform className='font-bold' size={30} strokeWidth={1.5} /> </h1>
                                   <Link href={'/tours'}><button className='text-white  text-xl font-bold btn btn-warning btn-outline border-b-4 '> ALL Tours </button></Link>

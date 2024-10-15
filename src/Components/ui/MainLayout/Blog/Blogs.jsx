@@ -24,7 +24,7 @@ const Blogs = () => {
      }, [])
      return (
           <div className="">      
-               <div className="grid lg:grid-cols-4 md:grid-cols-2  p-5  lg:p-5  grid-cols-1 gap-6  ">
+               <div className="grid lg:grid-cols-3 xl:grid-cols-4 md:grid-cols-2  p-5  lg:p-5  grid-cols-1 gap-6  ">
                     {
                          blogs.map(b => <div key={b._id}>
                              <div className="space-y-2">

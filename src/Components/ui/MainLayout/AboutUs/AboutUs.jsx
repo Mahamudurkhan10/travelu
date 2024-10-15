@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className='max-w-7xl mx-auto pt-12 '>
+    <div className='max-w-7xl px-0 lg:px-4 mx-auto pt-12 '>
       {/* First section: flex-row layout */}
       <div className='flex flex-col lg:flex-row gap-12 items-center'>
         <Image

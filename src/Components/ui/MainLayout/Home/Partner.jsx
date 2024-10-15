@@ -9,7 +9,7 @@ export default function Partner() {
       style={{ backgroundImage: "url('https://i.ibb.co/xf6sqww/bgparallax-03.jpg')" }}
     >
       <div className='absolute bg-black inset-0 opacity-70'> </div>
-      <div className='lg:h-[500px] h-[600px] max-w-7xl mx-auto'>
+      <div className='lg:h-[500px] h-[600px] lg:max-w-7xl px-0 md:px-4 mx-auto'>
         <div className='text-center pt-20 text-white opacity-90'>
           <h1 className='flex justify-center items-center'>
             <AudioWaveform className='font-bold' size={50} strokeWidth={1.5} />

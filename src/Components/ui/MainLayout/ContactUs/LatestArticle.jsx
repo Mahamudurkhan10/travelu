@@ -25,7 +25,7 @@ const articles = [
 ]
 const LatestArticle = () => {
      return (
-          <div className='max-w-7xl mx-auto pt-12 mb-12'>
+          <div className='max-w-7xl px-0 lg:px-4 mx-auto pt-12 mb-12'>
                <div className='text-center space-y-4'>
                     <div className='flex items-center text-center justify-center'>
                          <AudioWaveform className='font-bold' size={50} strokeWidth={1.5} />

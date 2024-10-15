@@ -3,7 +3,7 @@ import React from 'react';
 
 const AskQuestion = () => {
      return (
-          <div className='max-w-7xl mx-auto'>
+          <div className='max-w-7xl px-0 lg:px-4 mx-auto'>
                <section className=" dark:text-gray-800">
                     <div >
 

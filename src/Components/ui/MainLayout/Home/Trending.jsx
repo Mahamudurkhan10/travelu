@@ -44,7 +44,7 @@ const foods = [
 
 const Trending = () => {
   return (
-    <div className='mt-12 max-w-7xl mx-auto'>
+    <div className='mt-12 lg:max-w-7xl px-0 lg:px-4 mx-auto'>
       <div className='text-center'>
         <h1 className='flex justify-center items-center'>
           <AudioWaveform className='font-bold' size={50} strokeWidth={1.5} />
@@ -53,7 +53,7 @@ const Trending = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod tempora pariatur rerum?</p>
       </div>
 
-      <div className='grid grid-cols-1 mt-12 sm:grid-cols-2 md:grid-cols-3 gap-12'>
+      <div className='grid grid-cols-1 mt-12 sm:grid-cols-2 md:grid-cols-2 gap-12'>
         {foods.map((food) => (
          <Link href={`/tours`} key={food.id}>
           <div >

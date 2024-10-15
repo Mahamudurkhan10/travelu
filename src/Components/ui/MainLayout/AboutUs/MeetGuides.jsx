@@ -40,7 +40,7 @@ const MeetGuides = () => {
         
      ]
      return (
-          <div className='max-w-7xl mx-auto mb-12 mt-12'>
+          <div className='max-w-7xl px-0 lg:px-4 mx-auto mb-12 mt-12'>
                <div>
                     <h1 className='text-4xl flex items-center gap-2 '> Meet The Guides <AudioWaveform className='font-bold' size={40} strokeWidth={1.5} />  </h1>
                     <p className='mt-4'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga impedit sit veritatis. </p>

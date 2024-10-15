@@ -37,13 +37,13 @@ const Destinations = [
 ]
 const TopDestinations = () => {
      return (
-          <div className='mt-16'>
+          <div className='mt-16 px-0 lg:px-4'>
                <div className='text-center '>
                     <h1 className='flex justify-center items-center'>  <AudioWaveform className='font-bold' size={50} strokeWidth={1.5} /> </h1>
                     <h1 className='text-5xl py-4 font-semibold'> Top Destinations </h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod tempora pariatur rerum?</p>
                </div>
-               <div className='max-w-7xl  pt-10 grid grid-cols-2 lg:grid-cols-6 mx-auto'>
+               <div className='lg:max-w-7xl  pt-10 grid grid-cols-2 lg:grid-cols-6 mx-auto'>
                     {
                          Destinations.map((d, inx) => <div key={inx}>
                               <div className='text-center space-y-2'>

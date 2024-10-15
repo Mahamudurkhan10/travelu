@@ -15,7 +15,7 @@ const GuidesSwiper = ({ foods }) => {
      const swiperRef = useRef()
      return (
           <div>
-               <div className=' pt-7 mx-auto '>
+               <div className=' pt-7  mx-auto '>
                     {
                          foods.length > 0 && (
                               <Swiper

@@ -23,7 +23,7 @@ const Navbar = () => {
 
 
      const navItems = (
-          <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-8 lg:space-x-9'>
+          <div className='flex text-lg flex-col lg:flex-row font-semibold gap-2 lg:gap-3 xl:gap-8 lg:space-x-3 xl:space-x-9 '>
                <Link href={'/'}><li className={pathName === '/' ? 'text-warning font-bold' : 'font-semibold'}>Home</li></Link>
                <Link href={'/destination'}><li className={pathName === '/destination' ? 'text-warning font-bold' : 'font-semibold'}>Destination</li></Link>
                <Link href={'/aboutUs'}><li className={pathName === '/aboutUs' ? 'text-warning font-bold' : 'font-semibold'}>About Us</li></Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
      return (
           <div>
-               <div className="navbar fixed z-10 bg-base-100">
+               <div className="navbar  fixed z-10 bg-base-100">
                     <div className="navbar-start">
                          <div className="dropdown">
                               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +60,7 @@ const Navbar = () => {
                               <Backpack size={30} className='text-yellow-600' /> Travelu
                          </div>
                     </div>
-                    <div className="navbar-center hidden lg:flex">
+                    <div className="navbar-center hidden  lg:flex ">
                          <ul className="menu menu-horizontal px-1">{navItems}</ul>
                     </div>
                     <div className="navbar-end justify-end">
@@ -93,12 +93,12 @@ const Navbar = () => {
                                    </div>
                               </div>
                          ) : (
-                              <div className='lg:space-x-4 flex'>
+                              <div className='lg:space-x-4  lg:flex'>
                                    <Link href={'/login'}>
-                                        <button className='btn btn-warning hover:text-white lg:btn-outline px-8'>Login</button>
+                                        <button className='btn btn-warning hover:text-white lg:btn-outline xl:px-8'>Login</button>
                                    </Link>
                                    <Link href={'/signUp'}>
-                                        <button className='btn hidden lg:block bg-warning hover:text-white hover:bg-warning text-white px-8'>Sign Up</button>
+                                        <button className='btn hidden  lg:block  bg-warning hover:text-white hover:bg-warning text-white xl:px-8'>Sign Up</button>
                                    </Link>
                               </div>
                          )}

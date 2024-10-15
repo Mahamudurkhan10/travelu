@@ -85,8 +85,8 @@ const AllTours = () => {
      }
      return (
           <div className="p-3">
-               <div className="grid  lg:grid-cols-5 items-center gap-2 mt-12">
-                    <div className="p-4 lg:col-span-2 lg:flex grid grid-cols-3 gap-3 ">
+               <div className="grid  lg:grid-cols-5 xl:items-center gap-2 mt-12">
+                    <div className="p-4 lg:col-span-2 xl:flex grid grid-cols-4  gap-3 ">
                          {["", "Rome", "Italy", "France", "Venice", "Milan", "London"].map((place) => (
                               <button
                                    key={place}
@@ -98,7 +98,7 @@ const AllTours = () => {
                               </button>
                          ))}
                     </div>
-                    <div className="lg:col-span-1">
+                    <div className="lg:col-span-1 lg:pt-4 pt-0">
                          <form className="relative border  border-warning  rounded-xl text-gray-600">
                               <input
                                    type="search"
@@ -123,7 +123,7 @@ const AllTours = () => {
                     <div className="col-span-1">
 
                     </div>
-                    <div className="lg:col-span-1  ">
+                    <div className="lg:col-span-1 lg:pt-4 pt-0  ">
                          <select onChange={handleCategory} className="select w-full border py-3 rounded-xl border-warning p-3 max-w-xs">
                               <option disabled selected> Select Category </option>
                               <option value={""}>ALL</option>

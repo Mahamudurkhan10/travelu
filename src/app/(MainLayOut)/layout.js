@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <Navbar></Navbar>
         </div>
      
-        <div className="pt-20">
+        <div className="pt-20 ">
           {children}
         </div>
        

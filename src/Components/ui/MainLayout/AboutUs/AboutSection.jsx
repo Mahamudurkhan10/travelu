@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutSection = () => {
      return (
-          <div className='max-w-7xl mx-auto'>
+          <div className='max-w-7xl px-0 lg:px-4 mx-auto'>
                <div className='mt-12  grid gap-5 grid-cols-1 lg:grid-cols-3'>
                     <div>
                          <h1 className='text-3xl font-semibold'> <span className='text-red-400 font-semibold'>01</span> Luxury Hotels </h1>

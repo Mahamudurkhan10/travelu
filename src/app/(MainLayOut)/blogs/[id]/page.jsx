@@ -19,10 +19,10 @@ const BlogDetails = () => {
      },[params.id])
      return (
           <div className=" max-w-7xl mx-auto mt-12 mb-24 ">
-             <div className="flex  gap-5 ">
+             <div className="flex flex-col lg:flex-row gap-5 ">
 
                <Image src={blog?.mainImage} width={600} height={500} alt="main image" className="rounded-xl hover:shadow-2xl"></Image>
-               <div className="p-16 border w-2/5 hover:shadow-2xl shadow-lg rounded-xl">
+               <div className="p-16 border lg:w-2/5 hover:shadow-2xl shadow-lg rounded-xl">
                <h1 className="text-2xl font-semibold text-center"> {blog?.title} </h1>
                     <div className="flex justify-between py-5">
                     <div className="flex gap-3">
